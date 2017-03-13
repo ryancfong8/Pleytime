@@ -44,11 +44,11 @@ Pleytime is a web application inspired by Yelp built using Ruby on Rails and Rea
 
 ### Phase 2: Restaurants Model, API, and components (2 days)
 
-**Objective:** Restaurants belong to Restaurants that can be created, read, edited and destroyed through the API.
+**Objective:** Restaurants can be created, read, edited and destroyed through the API.
 
 ### Phase 3: Reviews (2 days)
 
-**Objective:** Reviews can be created, read, edited and destroyed through the API.
+**Objective:** Reviews belong to Restaurants and can be created, read, edited and destroyed through the API.
 
 ### Phase 4: Home Page and Search Bar (2 days)
 
