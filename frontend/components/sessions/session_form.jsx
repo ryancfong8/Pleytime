@@ -66,7 +66,10 @@ class SessionForm extends React.Component {
 	guestUser () {
 		if (this.state.modalType === 'Log In') {
 			return (
-				<button className="guestUser" onClick={this.props.loginGuestUser}>Log In As Guest User</button>
+				<div className="guest">
+					<h3 className="or">--or--</h3>
+					<button className="guestUser" onClick={this.props.loginGuestUser}>Log In As Guest User</button>
+				</div>
 			);
 		}
 		else {
@@ -118,7 +121,6 @@ class SessionForm extends React.Component {
 						</label>
 						<br/>
 						<button className="modal-submit" onClick={this.handleSubmit} >{this.state.modalType}</button>
-						<h3 className="or">--or--</h3>
 						{this.guestUser()}
 					</form>
 				</Modal>
