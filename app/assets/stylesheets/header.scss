@@ -85,8 +85,6 @@
 }
 
 .login-input {
-  display: flex;
-  align-content: center;
   font-family: "Arial"
 }
 
@@ -97,8 +95,6 @@
 }
 
 .guestUser {
-  display: flex;
-  align-items: center;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 5px;
@@ -113,6 +109,17 @@
   font-family: "Arial"
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .guestUser:hover {
   background-color: #f2f2f2
+}
+
+.or {
+  font-family: "Arial";
 }

@@ -86,9 +86,6 @@ class SessionForm extends React.Component {
 				</ul>
 			);
 		}
-		else {
-			return (<div></div>);
-		}
 	}
 
 	render() {
@@ -103,27 +100,26 @@ class SessionForm extends React.Component {
 					isOpen={this.state.modalOpen}
 					onRequestClose={this.closeModal}
 					style={ModalStyle}>
-					<h3 className = "modal-title">Welcome to Pleytime!</h3>
-					{this.guestUser()}
-					<form>
+					<form className="form">
+						<h3 className = "modal-title">Welcome to Pleytime!</h3>
 						{this.renderErrors()}
-						<div className="login-form">
-							<label className="label"> Username:
-								<input type="text"
-									value={this.state.username}
-									onChange={this.update("username")}
-									className="login-input" />
-							</label>
-							<br/>
-							<label className="label"> Password:
-								<input type="password"
-									value={this.state.password}
-									onChange={this.update("password")}
-									className="login-input" />
-							</label>
-							<br/>
-							<button className="modal-submit" onClick={this.handleSubmit} >{this.state.modalType}</button>
-						</div>
+						<label className="label"> Username:
+							<input type="text"
+								value={this.state.username}
+								onChange={this.update("username")}
+								className="login-input" />
+						</label>
+						<br/>
+						<label className="label"> Password:
+							<input type="password"
+								value={this.state.password}
+								onChange={this.update("password")}
+								className="login-input" />
+						</label>
+						<br/>
+						<button className="modal-submit" onClick={this.handleSubmit} >{this.state.modalType}</button>
+						<h3 className="or">--or--</h3>
+						{this.guestUser()}
 					</form>
 				</Modal>
 			</div>
