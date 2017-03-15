@@ -19,9 +19,14 @@ export const login = (user) => (dispatch) => {
 };
 
 export const signup = (user) => (dispatch) => {
-  return SessionApiUtil.signup(user).then((user1) => dispatch(receiveCurrentUser(user1)));
+  return SessionApiUtil.signup(user).then((user1) => dispatch(receiveCurrentUser(user1)),
+  err => dispatch(receiveErrors(err.responseJSON)));
 };
 
 export const logout = () => (dispatch) => {
   return SessionApiUtil.logout().then(() => dispatch(receiveCurrentUser(null)));
+};
+
+export const loginGuestUser = () => (dispatch) => {
+  return SessionApiUtil.loginGuestUser().then((user1) => dispatch(receiveCurrentUser(user1)));
 };

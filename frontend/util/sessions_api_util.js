@@ -9,3 +9,7 @@ export const login = (user) => (
 export const logout = () => (
   $.ajax({method: 'DELETE', url: '/api/session'})
 );
+
+export const loginGuestUser = () => (
+  $.ajax({method: 'POST', url: '/api/session', data: {user :{username: 'Guest User', password: 'password'}} })
+);

@@ -10,7 +10,7 @@ class SessionForm extends React.Component {
 					username: "",
 					password: "",
 					modalOpen: false,
-					modalType: 'login'
+					modalType: 'Log In'
 				};
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.openModal = this.openModal.bind(this);
@@ -35,7 +35,7 @@ class SessionForm extends React.Component {
 
 	handleSubmit(e) {
 	 e.preventDefault();
-	 if (this.state.modalType === 'login') {
+	 if (this.state.modalType === 'Log In') {
 			this.props.login(this.state);
 		}
 		else {
@@ -43,14 +43,14 @@ class SessionForm extends React.Component {
 		}
 	}
 
-	navLink() {
-		if (this.state.modalType === "login") {
-    	return <button onClick={this.openModal.bind(this, 'signup')}>Sign Up Instead!</button>;
-		}
-		else {
-			return <button onClick={this.openModal.bind(this, 'login')}>Login instead!</button>;
-	 	}
-	}
+	// navLink() {
+	// 	if (this.state.modalType === "login") {
+  //   	return <button className="modal-button" onClick={this.openModal.bind(this, 'signup')}>Sign Up Instead!</button>;
+	// 	}
+	// 	else {
+	// 		return <button className="modal-button" onClick={this.openModal.bind(this, 'login')}>Login instead!</button>;
+	//  	}
+	// }
 
 	openModal(modalType) {
 		this.setState({
@@ -63,53 +63,66 @@ class SessionForm extends React.Component {
 		this.setState({modalOpen: false});
 	}
 
+	guestUser () {
+		if (this.state.modalType === 'Log In') {
+			return (
+				<button className="guestUser" onClick={this.props.loginGuestUser}>Log In As Guest User</button>
+			);
+		}
+		else {
+			return <div></div>;
+		}
+	}
+
 	renderErrors() {
-		return(
-			<ul>
-				{this.props.errors.map((error, i) => (
-					<li key={`error-${i}`}>
-						{error}
-					</li>
-				))}
-			</ul>
-		);
+		if (this.props.errors) {
+			return(
+				<ul>
+					{this.props.errors.map((error, i) => (
+						<li key={`error-${i}`}>
+							{error}
+						</li>
+					))}
+				</ul>
+			);
+		}
+		else {
+			return (<div></div>);
+		}
 	}
 
 	render() {
 		return (
 				<div className = "login">
 				<nav className="login-signup">
-					<button onClick={this.openModal.bind(this, 'login')}>Login</button>
-					&nbsp;or&nbsp;
-					<button onClick={this.openModal.bind(this, 'signup')}>Sign up!</button>
+					<button onClick={this.openModal.bind(this, 'Log In')}>Log In</button>
+					<button onClick={this.openModal.bind(this, 'Sign Up')}>Sign Up</button>
 				</nav>
 				<Modal
 					contentLabel="Modal"
 					isOpen={this.state.modalOpen}
 					onRequestClose={this.closeModal}
 					style={ModalStyle}>
-					Welcome to Pleytime!
-					<br/>
-					{this.navLink()}
-					<form onSubmit={this.handleSubmit} >
+					<h3 className = "modal-title">Welcome to Pleytime!</h3>
+					{this.guestUser()}
+					<form>
 						{this.renderErrors()}
 						<div className="login-form">
-							<br/>
-							<label> Username:
+							<label className="label"> Username:
 								<input type="text"
 									value={this.state.username}
 									onChange={this.update("username")}
 									className="login-input" />
 							</label>
 							<br/>
-							<label> Password:
+							<label className="label"> Password:
 								<input type="password"
 									value={this.state.password}
 									onChange={this.update("password")}
 									className="login-input" />
 							</label>
 							<br/>
-							<input type="submit" value="Submit" />
+							<button className="modal-submit" onClick={this.handleSubmit} >{this.state.modalType}</button>
 						</div>
 					</form>
 				</Modal>

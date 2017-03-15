@@ -1,29 +1,118 @@
-// .login {
-//   background-color: #D32323;
-//   display: flex;
-//   justify-content:flex-end;;
-//   margin: auto;
-//   align-items:flex-end;;
-//   width: 100%;
-//   height: 90px;
-// }
+.header {
+  background-color: #e60000;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-items:center;
+  height: 90px;
+  flex : 1 100%;
+}
 
-// .login-signup {
-//   background-color: #D32323;
-//   display: flex;
-//   justify-content:flex-end;;
-//   margin: auto;
-//   align-items:flex-end;;
-//   width: 100%;
-//   height: 90px;
-// }
-//
-// .header {
-//   background-color: #D32323;
-//   display: flex;
-//   justify-content:flex-end;;
-//   margin: auto;
-//   align-items:flex-end;;
-//   width: 100%;
-//   height: 90px;
-// }
+.header h1 {
+  margin-left: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: "Papyrus";
+}
+
+
+.login-signup {
+  display: flex;
+  justify-content:space-between;
+  margin: auto;
+  align-items:center;
+}
+
+.login-signup button {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: #cc0000;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  border: 1px, solid, #ffffff;
+}
+
+.login-signup button:hover {
+  background-color: #990000;
+}
+
+.header-group {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-name {
+  margin: 10px;
+  color: #ffffff;
+}
+
+.header-button {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: #cc0000;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  border: 1px, solid, #ffffff;
+}
+
+.header-button:hover {
+  background-color: #990000
+}
+
+.modal-title {
+  font-weight: bold;
+  font-family: "Arial"
+}
+
+.modal-submit {
+  background-color: #ffffff;
+  font-family: "Arial";
+  font-weight: bold;
+}
+.modal-submit:hover {
+  background-color: #f2f2f2;
+}
+
+.login-input {
+  display: flex;
+  align-content: center;
+  font-family: "Arial"
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guestUser {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-family: "Arial";
+  font-weight: bold;
+}
+
+.label {
+  font-family: "Arial"
+}
+
+.guestUser:hover {
+  background-color: #f2f2f2
+}
