@@ -12,12 +12,18 @@ class Restaurants extends React.Component {
 
   render () {
     return (
-      <div>
-        <ul>
-          {this.props.restaurants.map((restaurant) => (
-            <RestaurantIndexItem key = {restaurant.id} restaurant = {restaurant}/>
-          ))}
-        </ul>
+      <div className='restaurants'>
+        <div>
+          <h1>Restauarants</h1>
+          <ul>
+            {this.props.restaurants.map((restaurant) => (
+              <RestaurantIndexItem key = {restaurant.id} restaurant = {restaurant}/>
+            ))}
+          </ul>
+        </div>
+        <div className = 'map-index'>
+          <h1>Map</h1>
+        </div>
       </div>
     );
   }

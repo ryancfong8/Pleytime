@@ -22,13 +22,19 @@ class Restaurant extends React.Component {
   render() {
     return (
       <div>
-        <h1>{this.props.restaurant.name}</h1>
-        <p>Address: {this.props.restaurant.address}</p>
-        <p>Rating: </p>
-        <p>Price: {this.props.restaurant.price}</p>
-        <p>Hours: {this.props.restaurant.hours}</p>
-        <p>{this.props.restaurant.description}</p>
-        <h2>Reviews</h2>
+        <div>
+          <h1>{this.props.restaurant.name}</h1>
+          <img src={this.props.restaurant.image_url} />
+          <p>Address: {this.props.restaurant.address}</p>
+          <p>Rating: </p>
+          <p>Price: {this.props.restaurant.price}</p>
+          <p>Hours: {this.props.restaurant.hours}</p>
+          <p>{this.props.restaurant.description}</p>
+          <h2>Reviews</h2>
+        </div>
+        <div>
+          <h1>Map</h1>
+        </div>
       </div>
     );
   }

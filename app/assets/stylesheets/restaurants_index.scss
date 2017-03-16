@@ -1,0 +1,46 @@
+.restaurants {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.map-index {
+  width: 50%;
+}
+
+.restaurant-list {
+  list-style: none;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-index {
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  justify-content: space-between;
+  height: 100%
+}
+
+.title-properties {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+
+}
+
+.picture {
+  width: 100px;
+  height: 100px;
+}
