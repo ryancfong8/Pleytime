@@ -28,5 +28,7 @@ export const logout = () => (dispatch) => {
 };
 
 export const loginGuestUser = () => (dispatch) => {
-  return SessionApiUtil.loginGuestUser().then((user1) => dispatch(receiveCurrentUser(user1)));
+  return SessionApiUtil.loginGuestUser().then((user1) => {
+    dispatch(receiveCurrentUser(user1));
+  });
 };

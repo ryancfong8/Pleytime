@@ -11,5 +11,5 @@ export const logout = () => (
 );
 
 export const loginGuestUser = () => (
-  $.ajax({method: 'POST', url: '/api/session', data: {user :{username: 'Guest User', password: 'password'}} })
+  $.ajax({method: 'POST', url: '/api/session', data: {user: {username: 'Guest User', password: 'password'}} })
 );

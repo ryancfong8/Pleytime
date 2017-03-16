@@ -15,6 +15,7 @@ class SessionForm extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.openModal = this.openModal.bind(this);
 		this.closeModal = this.closeModal.bind(this);
+		this.handleLoginGuest = this.handleLoginGuest.bind(this);
 	}
 
 	componentDidUpdate() {
@@ -63,12 +64,17 @@ class SessionForm extends React.Component {
 		this.setState({modalOpen: false});
 	}
 
+	handleLoginGuest(e) {
+		e.preventDefault();
+		this.props.loginGuestUser();
+	}
+
 	guestUser () {
 		if (this.state.modalType === 'Log In') {
 			return (
 				<div className="guest">
 					<h3 className="or">--or--</h3>
-					<button className="guestUser" onClick={this.props.loginGuestUser}>Log In As Guest User</button>
+					<button className="guestUser" onClick={this.handleLoginGuest}>Log In As Guest User</button>
 				</div>
 			);
 		}
