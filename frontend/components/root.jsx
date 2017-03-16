@@ -3,6 +3,8 @@ import App from './app';
 import SessionFormContainer from './sessions/session_form_container';
 import { Provider } from 'react-redux';
 import React from 'react';
+import RestaurantsContainer from './restaurants/restaurants_container';
+import RestaurantContainer from './restaurants/restaurant_container';
 
 const Root = ({ store }) => {
   const _ensureLoggedIn = (nextState, replace) => {
@@ -22,6 +24,8 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path="/" component={ App } >
+          <IndexRoute component={ RestaurantsContainer } />
+          <Route path="restaurants/:restaurantId" component={RestaurantContainer} />
         </Route>
       </Router>
     </Provider>
