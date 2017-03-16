@@ -37,11 +37,12 @@ class SessionForm extends React.Component {
 	handleSubmit(e) {
 	 e.preventDefault();
 	 if (this.state.modalType === 'Log In') {
-			this.props.login(this.state);
+		this.props.login(this.state);
 		}
 		else {
 			this.props.signup(this.state);
 		}
+		this.props.clearErrors();
 	}
 
 	// navLink() {
@@ -55,13 +56,17 @@ class SessionForm extends React.Component {
 
 	openModal(modalType) {
 		this.setState({
+			username: "",
+			password: "",
 			modalOpen: true,
 			modalType
 		});
+		this.props.clearErrors();
 	}
 
 	closeModal() {
 		this.setState({modalOpen: false});
+		this.props.clearErrors();
 	}
 
 	handleLoginGuest(e) {
