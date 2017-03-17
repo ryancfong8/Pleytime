@@ -1,0 +1,94 @@
+.restaurants {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffd9b3;
+}
+
+.restaurants-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+}
+
+.map-index {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.restaurant-list {
+  list-style: none;
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+  border-radius: 15px;
+  align-items:center;
+  background-color: #ffe6cc;
+  font-size: 14px;
+  margin: 20px;
+  justify-content: space-between;
+}
+
+.restaurant-list:hover {
+  background-color: #fff2e6;
+}
+
+.restaurant-index {
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.title-properties {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;;
+  justify-content: space-between;;
+  margin-left: 10px;
+  margin-right: 40px;
+  width: 33%;
+}
+
+.restaurant-index-name {
+  font-weight: bold;
+  font-family: 'Arial';
+  font-size: 16px;
+  color: #0033cc;
+}
+
+.restaurant-index-name:hover{
+  text-decoration: underline;
+}
+
+.r-address {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: flex-start;
+}
+
+.restaurant-index-price {
+  color: #1f7a1f;
+  font-weight: bold;
+}
+
+.picture {
+  width: 100px;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.r-description {
+  margin: 5px;
+}

@@ -13,8 +13,8 @@ class Restaurants extends React.Component {
   render () {
     return (
       <div className='restaurants'>
-        <div>
-          <h1>Restauarants</h1>
+        <div className='restaurants-items'>
+          <h1>Restaurants</h1>
           <ul>
             {this.props.restaurants.map((restaurant) => (
               <RestaurantIndexItem key = {restaurant.id} restaurant = {restaurant}/>

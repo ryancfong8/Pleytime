@@ -6,15 +6,22 @@ const RestaurantIndexItem = (props) => (
     <div className="restaurant-index">
       <img className = "picture" src={props.restaurant.image_url} />
       <div className="title-properties">
-        <Link to={`/restaurants/${props.restaurant.id}`}>{props.restaurant.name}</Link>
-        <text>Rating: </text>
-        <text>Price: {props.restaurant.price}</text>
+        <Link className="restaurant-index-name" to={`/restaurants/${props.restaurant.id}`}>{props.restaurant.name}</Link>
+        <text className = "restaurant-index-rating">Rating: </text>
+        <div>
+          <text>Price: </text>
+          <text className="restaurant-index-price">{props.restaurant.price}</text>
+        </div>
       </div>
-      <div className="address">
-        <text>Address: {props.restaurant.address}</text>
+      <div className="r-address">
+        <text>{props.restaurant.address}</text>
+        <text>{props.restaurant.city_params}</text>
+        <text>{props.restaurant.phone}</text>
       </div>
     </div>
-    <p>{props.restaurant.description}</p>
+    <div className="r-description">
+      <text>{props.restaurant.description}</text>
+    </div>
   </li>
 );
 

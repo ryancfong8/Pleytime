@@ -1,0 +1,79 @@
+.restaurant-page {
+  background-color: #ffd9b3;
+  height: 100%;
+}
+
+.restaurant-content {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin-left: 15%;
+  background-color: #ffd9b3;
+}
+
+.r-des-map {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.r-des {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%;
+}
+
+.r-rating-hours {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  width: 95%;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.r-rating{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.r-price{
+  display: flex;
+  flex-direction: row;
+}
+
+.r-hours{
+  margin-left: 200px;
+}
+
+.r-map{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.r-imgs {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.r-imgs > img {
+  height: 250px;
+  width: 250px;
+  margin-top: 20px;
+}
+
+.r-imgs > img:hover {
+  height: 300px;
+  width: 300px;
+}
+
+.r-reviews {
+  width: 100%;
+}
