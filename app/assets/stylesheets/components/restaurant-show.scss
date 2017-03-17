@@ -1,9 +1,6 @@
 .restaurant-page {
   background-color: #ffd9b3;
   height: 100%;
-}
-
-.restaurant-content {
   display: flex;
   flex-direction: column;
   width: 75%;
@@ -58,15 +55,24 @@
   width: 30%;
 }
 
+.r-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .r-imgs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   width: 100%;
   margin-bottom: 20px;
+  height: 350px;
 }
 
 .r-imgs > img {
   height: 250px;
   width: 250px;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .r-imgs > img:hover {
@@ -76,4 +82,19 @@
 
 .r-reviews {
   width: 100%;
+}
+
+.r-slider {
+  min-height: 0;
+  min-width: 0;
+}
+
+.slider-images {
+  height: 50px;
+  width: auto;
+}
+
+.slider {
+  min-height: 0;
+  min-width: 0;
 }

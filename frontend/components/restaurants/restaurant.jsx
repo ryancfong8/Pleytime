@@ -1,4 +1,5 @@
 import React from 'react';
+import PhotoSlider from './restaurant_pic_slider';
 
 class Restaurant extends React.Component {
   constructor(props){
@@ -49,9 +50,14 @@ class Restaurant extends React.Component {
             <h2>Map</h2>
           </div>
         </div>
-          <div className="r-imgs">
-            <h2>Pictures</h2>
-            <img src={this.props.restaurant.image_url} />
+        <h2>Pictures</h2>
+          <div className="r-images">
+            <div className="r-imgs">
+              <img src={this.props.restaurant.image_url} />
+            </div>
+            <div className='r-slider'>
+              <PhotoSlider photos = {this.props.restaurant.photos} />
+            </div>
           </div>
           <div className="r-reviews">
             <h2>Reviews</h2>

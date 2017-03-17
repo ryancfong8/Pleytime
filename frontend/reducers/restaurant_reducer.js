@@ -9,7 +9,8 @@ const nullRestaurant = {
   hours: "",
   lat: "",
   long: "",
-  image_url: ""
+  image_url: "",
+  photos: []
 };
 
 const RestaurantReducer = (oldState = nullRestaurant, action) => {
