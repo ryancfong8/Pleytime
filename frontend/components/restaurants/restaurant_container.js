@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchRestaurant } from '../../actions/restaurants_actions.js';
+import { fetchRestaurant, createImage } from '../../actions/restaurants_actions.js';
 import Restaurant from './restaurant.jsx';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -7,7 +7,8 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchRestaurant: (id) => dispatch(fetchRestaurant(id))
+  fetchRestaurant: (id) => dispatch(fetchRestaurant(id)),
+  createImage: (data) => dispatch(createImage(data))
 });
 
 export default connect(

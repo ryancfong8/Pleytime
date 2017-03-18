@@ -8,6 +8,10 @@
   background-color: #ffd9b3;
 }
 
+.background {
+  background-color: #ffd9b3;
+}
+
 .r-des-map {
   display: flex;
   flex-direction: row;
@@ -64,9 +68,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
+  width: 90%;
   margin-bottom: 20px;
   height: 350px;
+  overflow: scroll;
 }
 
 .r-imgs > img {
@@ -84,17 +89,19 @@
   width: 100%;
 }
 
-.r-slider {
-  min-height: 0;
-  min-width: 0;
+.scroll-image {
+  height: 250px;
+  width: 250px;
 }
 
-.slider-images {
-  height: 50px;
-  width: auto;
-}
 
-.slider {
-  min-height: 0;
-  min-width: 0;
-}
+
+// .slider-images {
+//   height: 50px;
+//   width: auto;
+// }
+//
+// .slider {
+//   min-height: 0;
+//   min-width: 0;
+// }

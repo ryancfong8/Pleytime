@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const RestaurantIndexItem = (props) => (
   <li className="restaurant-list">
     <div className="restaurant-index">
-      <img className = "picture" src={props.restaurant.image_url} />
+      <img className = "picture" src={props.restaurant.photos[0].url} />
       <div className="title-properties">
         <Link className="restaurant-index-name" to={`/restaurants/${props.restaurant.id}`}>{props.restaurant.name}</Link>
         <text className = "restaurant-index-rating">Rating: </text>

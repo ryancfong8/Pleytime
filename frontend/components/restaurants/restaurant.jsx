@@ -1,14 +1,26 @@
 import React from 'react';
 import PhotoSlider from './restaurant_pic_slider';
+import UploadButton from './upload_button';
 
 class Restaurant extends React.Component {
   constructor(props){
     super(props);
+
+    this.postImage = this.postImage.bind(this);
+    this.state = { key: 1 };
+  }
+
+  updateKey () {
+    this.setState({key: Math.random()});
   }
 
   componentDidMount(){
     this.props.fetchRestaurant(this.props.params.restaurantId);
   }
+
+  // componentWillUpdate() {
+  //   this.props.fetchRestaurant(this.props.params.restaurantId);
+  // }
 
   componentWillReceiveProps(newProps){
     if (this.props.params.restaurantId !== newProps.params.restaurantId) {
@@ -20,8 +32,14 @@ class Restaurant extends React.Component {
     return parseInt(this.props.params.restaurantId) === this.props.restaurant.id;
   }
 
+  postImage(url) {
+    let data = {photo: {restaurant_id: this.props.params.restaurantId, user_id: window.currentUser.id, url: url }};
+    this.props.createImage(data);
+  }
+
   render() {
     return (
+      <div className='background'>
       <div className="restaurant-page">
         <div className="restaurant-content">
           <div className="r-des-map">
@@ -53,10 +71,9 @@ class Restaurant extends React.Component {
         <h2>Pictures</h2>
           <div className="r-images">
             <div className="r-imgs">
-              <img src={this.props.restaurant.image_url} />
-            </div>
-            <div className='r-slider'>
-              <PhotoSlider photos = {this.props.restaurant.photos} />
+              {this.props.restaurant.photos.map((photo) => (
+                <img className="scroll-image" key={photo.id} src={photo.url} />
+              ))}
             </div>
           </div>
           <div className="r-reviews">
@@ -64,8 +81,15 @@ class Restaurant extends React.Component {
           </div>
         </div>
       </div>
+      </div>
     );
   }
 }
 
 export default Restaurant;
+// <div className="r-imgs">
+//   <img src={this.props.restaurant.image_url} />
+// </div>
+// <PhotoSlider photos = {this.props.restaurant.photos} />
+
+// <UploadButton updateKey= {this.updateKey.bind(this)} createImage={this.props.createImage} restaurantId = {this.props.params.restaurantId}/>

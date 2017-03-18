@@ -4,7 +4,7 @@ class Api::PhotosController < ApplicationController
     if @photo.save
       render 'api/restaurants/show'
     else
-      render json: @restaurant.errors.full_messages, status: 422
+      render json: @photo.errors.full_messages, status: 422
     end
   end
 
@@ -17,6 +17,6 @@ class Api::PhotosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photo).permit(:restaurant_id, :review_id, :url)
+    params.require(:photo).permit(:restaurant_id, :user_id, :url)
   end
 end
