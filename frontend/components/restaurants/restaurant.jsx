@@ -1,6 +1,7 @@
 import React from 'react';
 import PhotoSlider from './restaurant_pic_slider';
 import UploadButton from './upload_button';
+import ReviewIndexContainer from "../reviews/review_container";
 
 class Restaurant extends React.Component {
   constructor(props){
@@ -41,45 +42,48 @@ class Restaurant extends React.Component {
     return (
       <div className='background'>
       <div className="restaurant-page">
-        <div className="restaurant-content">
-          <div className="r-des-map">
+
             <div className = "r-des">
               <h1>{this.props.restaurant.name}</h1>
-              <div className="r-rating-hours">
-                <div className="r-rating">
-                  <text>Rating: </text>
-                  <div className="r-price">
-                    <text>Price: </text>
-                    <text className="restaurant-index-price">{this.props.restaurant.price}</text>
-                  </div>
-                </div>
-                <div className="r-hours">
-                  <text>Hours: {this.props.restaurant.hours}</text>
-                </div>
+              <div className="r-rating">
+                <text>Rating: </text>
+              <div className="r-price">
+                <text>Price: </text>
+                <text className="restaurant-index-price">{this.props.restaurant.price}</text>
               </div>
-            <br />
-              <text>{this.props.restaurant.address}</text>
-              <text>{this.props.restaurant.city_params}</text>
-              <text>{this.props.restaurant.phone}</text>
-              <br />
-              <p>{this.props.restaurant.description}</p>
             </div>
-          <div className="r-map">
-            <h2>Map</h2>
           </div>
-        </div>
+
+            <div className="r-map-hours">
+              <div className="r-map-info">
+                  <div className="r-map">
+                    <h2>Map</h2>
+                  </div>
+                  <text>{this.props.restaurant.address}</text>
+                  <text>{this.props.restaurant.city_params}</text>
+                  <text>{this.props.restaurant.phone}</text>
+                  <br />
+                  <p>{this.props.restaurant.description}</p>
+              </div>
+              <div className="r-hours">
+                  <h3>Hours</h3>
+                  <text>Monday: {this.props.restaurant.mon}</text>
+                  <text>Tuesday: {this.props.restaurant.tue}</text>
+                  <text>Wednesday: {this.props.restaurant.wed}</text>
+                  <text>Thursday: {this.props.restaurant.thur}</text>
+                  <text>Friday: {this.props.restaurant.fri}</text>
+                  <text>Saturday: {this.props.restaurant.sat}</text>
+                  <text>Sunday: {this.props.restaurant.sun}</text>
+              </div>
+          </div>
+
         <h2>Pictures</h2>
-          <div className="r-images">
-            <div className="r-imgs">
-              {this.props.restaurant.photos.map((photo) => (
-                <img className="scroll-image" key={photo.id} src={photo.url} />
-              ))}
-            </div>
-          </div>
-          <div className="r-reviews">
-            <h2>Reviews</h2>
-          </div>
+        <div className="r-imgs">
+          {this.props.restaurant.photos.map((photo) => (
+            <img className="scroll-image" key={photo.id} src={photo.url} />
+          ))}
         </div>
+        <ReviewIndexContainer reviews={this.props.restaurant.reviews} restaurantId={this.props.params.restaurantId}/>
       </div>
       </div>
     );

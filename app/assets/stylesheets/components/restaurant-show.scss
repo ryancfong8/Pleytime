@@ -12,29 +12,19 @@
   background-color: #ffd9b3;
 }
 
-.r-des-map {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 100%;
-  margin-bottom: 20px;
-  margin-top: 10px;
-}
+// .r-des-pic {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: flex-start;
+//   width: 100%;
+//   margin-bottom: 20px;
+//   margin-top: 10px;
+// }
 
 .r-des {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 70%;
-}
-
-.r-rating-hours {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  width: 95%;
-  margin-top: 10px;
-  justify-content: space-between;
 }
 
 .r-rating{
@@ -49,7 +39,13 @@
 }
 
 .r-hours{
-  margin-left: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background-color: #fff2e6;
 }
 
 .r-map{
@@ -57,42 +53,61 @@
   flex-direction: column;
   align-items: center;
   width: 30%;
+  border: 1px solid #000000;
 }
 
-.r-images {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+// .r-images {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
 .r-imgs {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 90%;
+  width: 100%;
   margin-bottom: 20px;
-  height: 350px;
   overflow: scroll;
+  background-color: #fff2e6;
 }
 
 .r-imgs > img {
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
   margin: 20px;
 }
 
 .r-imgs > img:hover {
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
 }
 
 .r-reviews {
   width: 100%;
 }
 
-.scroll-image {
-  height: 250px;
-  width: 250px;
+.r-map-hours {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
+
+.r-map-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:50%;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  background-color: #fff2e6;
+  margin-right: 10px;
+}
+
 
 
 

@@ -78,7 +78,7 @@ class SessionForm extends React.Component {
 		if (this.state.modalType === 'Sign Up') {
 			return (
 				<div className="guest">
-					<h3 className="or">--or--</h3>
+					<h3 className="or">or</h3>
 					<button className="guestUser" onClick={this.handleLoginGuest}>Log In As Guest User</button>
 				</div>
 			);

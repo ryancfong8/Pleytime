@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import React from 'react';
 import RestaurantsContainer from './restaurants/restaurants_container';
 import RestaurantContainer from './restaurants/restaurant_container';
+import ReviewFormContainer from './reviews/review_form_container';
 
 const Root = ({ store }) => {
   const _ensureLoggedIn = (nextState, replace) => {
@@ -25,7 +26,8 @@ const Root = ({ store }) => {
       <Router history={ hashHistory }>
         <Route path="/" component={ App } >
           <IndexRoute component={ RestaurantsContainer } />
-          <Route path="restaurants/:restaurantId" component={RestaurantContainer} />
+          <Route path="restaurants/:restaurantId" component={RestaurantContainer}>
+          </Route>
         </Route>
       </Router>
     </Provider>
@@ -33,3 +35,5 @@ const Root = ({ store }) => {
 };
 
 export default Root;
+
+// <Route path="reviews/:reviewId" component={ReviewFormContainer} />

@@ -11,7 +11,8 @@ const nullRestaurant = {
   lat: "",
   long: "",
   image_url: "",
-  photos: []
+  photos: [],
+  reviews: []
 };
 
 const RestaurantReducer = (oldState = nullRestaurant, action) => {
@@ -20,7 +21,7 @@ const RestaurantReducer = (oldState = nullRestaurant, action) => {
     case RECEIVE_RESTAURANT:
       return merge({}, action.restaurant);
     case RECEIVE_PHOTO:
-      return merge({}, oldState, {})
+      return merge({}, oldState, {});
     default:
       return oldState;
   }
