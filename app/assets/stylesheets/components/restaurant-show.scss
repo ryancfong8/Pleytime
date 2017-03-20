@@ -3,8 +3,9 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 70%;
   margin-left: 15%;
+  margin-right: 15%;
   background-color: #ffd9b3;
 }
 
@@ -31,21 +32,25 @@
   display: flex;
   flex-direction: column;
   align-items: baseline;
+  font-size: 20px;
 }
 
 .r-price{
   display: flex;
   flex-direction: row;
+  font-size: 20px;
 }
 
 .r-hours{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 35%;
   border: 1px solid #000000;
   border-radius: 10px;
   background-color: #fff2e6;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .r-map{
@@ -54,6 +59,21 @@
   align-items: center;
   width: 30%;
   border: 1px solid #000000;
+}
+
+.day-hours {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;;
+}
+
+.day-hours > text {
+  margin: 3px;
+}
+
+.day {
+  font-weight: bold;
+  margin-right: 5px;
 }
 
 // .r-images {
@@ -87,7 +107,7 @@
   width: 100%;
 }
 
-.r-map-hours {
+.r-map-pics {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -106,6 +126,12 @@
   border-radius: 10px;
   background-color: #fff2e6;
   margin-right: 10px;
+}
+
+.r-reviews-hours {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 

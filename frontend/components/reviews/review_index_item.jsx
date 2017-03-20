@@ -1,5 +1,6 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
+import starRating from "../starRating";
 
 class ReviewIndexItem extends React.Component {
   constructor(props) {
@@ -32,8 +33,11 @@ class ReviewIndexItem extends React.Component {
   render () {
     return (
       <li className="ReviewListItem">
+        <div className="rating-date">
+          <text className="re-rating">Rating: {starRating(this.props.review.rating)}</text>
+          <text>{this.props.review.created_at}</text>
+        </div>
         <text className="Headline">{this.props.review.headline}</text>
-        <text>Rating: {this.props.review.rating}</text>
         <text>By: {this.props.review.user.username}</text>
         <br />
         <p>{this.props.review.body}</p>

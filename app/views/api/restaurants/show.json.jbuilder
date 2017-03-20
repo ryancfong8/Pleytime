@@ -1,4 +1,4 @@
-json.extract! @restaurant, :id, :name, :description, :address, :mon, :tue, :wed, :thur, :fri, :sat, :sun, :price, :lat, :long, :image_url, :city_params, :phone, :photos, :reviews
+json.extract! @restaurant, :id, :name, :description, :address, :mon, :tue, :wed, :thur, :fri, :sat, :sun, :price, :lat, :long, :city_params, :phone, :photos, :reviews
 
 json.reviews @restaurant.reviews do |review|
   json.id review.id
@@ -10,3 +10,6 @@ json.reviews @restaurant.reviews do |review|
     json.extract! review.user, :username
   end
 end
+
+json.averageRating @restaurant.averageRating
+json.numReviews @restaurant.numReviews

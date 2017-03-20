@@ -2,6 +2,7 @@ import React from 'react';
 import PhotoSlider from './restaurant_pic_slider';
 import UploadButton from './upload_button';
 import ReviewIndexContainer from "../reviews/review_container";
+import starRating from "../starRating";
 
 class Restaurant extends React.Component {
   constructor(props){
@@ -46,7 +47,8 @@ class Restaurant extends React.Component {
             <div className = "r-des">
               <h1>{this.props.restaurant.name}</h1>
               <div className="r-rating">
-                <text>Rating: </text>
+                <text>Rating: {starRating(parseInt(this.props.restaurant.averageRating))}</text>
+                <text>     {this.props.restaurant.numReviews} Reviews</text>
               <div className="r-price">
                 <text>Price: </text>
                 <text className="restaurant-index-price">{this.props.restaurant.price}</text>
@@ -54,7 +56,7 @@ class Restaurant extends React.Component {
             </div>
           </div>
 
-            <div className="r-map-hours">
+            <div className="r-map-pics">
               <div className="r-map-info">
                   <div className="r-map">
                     <h2>Map</h2>
@@ -65,27 +67,44 @@ class Restaurant extends React.Component {
                   <br />
                   <p>{this.props.restaurant.description}</p>
               </div>
-              <div className="r-hours">
-                  <h3>Hours</h3>
-                  <text>Monday: {this.props.restaurant.mon}</text>
-                  <text>Tuesday: {this.props.restaurant.tue}</text>
-                  <text>Wednesday: {this.props.restaurant.wed}</text>
-                  <text>Thursday: {this.props.restaurant.thur}</text>
-                  <text>Friday: {this.props.restaurant.fri}</text>
-                  <text>Saturday: {this.props.restaurant.sat}</text>
-                  <text>Sunday: {this.props.restaurant.sun}</text>
+              <div className="r-imgs">
+                {this.props.restaurant.photos.map((photo) => (
+                  <img className="scroll-image" key={photo.id} src={photo.url} />
+                ))}
               </div>
           </div>
 
-        <h2>Pictures</h2>
-        <div className="r-imgs">
-          {this.props.restaurant.photos.map((photo) => (
-            <img className="scroll-image" key={photo.id} src={photo.url} />
-          ))}
+      <div className='r-reviews-hours'>
+        <div className="reviews">
+          <ReviewIndexContainer reviews={this.props.restaurant.reviews} restaurantId={this.props.params.restaurantId}/>
         </div>
-        <ReviewIndexContainer reviews={this.props.restaurant.reviews} restaurantId={this.props.params.restaurantId}/>
+        <div className="r-hours">
+            <h3>Hours</h3>
+            <div className="day-hours">
+            <text className="day">Monday: </text><text>{this.props.restaurant.mon}</text>
+            </div>
+            <div className="day-hours">
+            <text className="day">Tuesday: </text><text>{this.props.restaurant.tue}</text>
+            </div>
+            <div className="day-hours">
+            <text className="day">Wednesday: </text><text>{this.props.restaurant.wed}</text>
+            </div>
+            <div className="day-hours">
+            <text className="day">Thursday: </text><text>{this.props.restaurant.thur}</text>
+            </div>
+            <div className="day-hours">
+            <text className="day">Friday: </text><text>{this.props.restaurant.fri}</text>
+            </div>
+            <div className="day-hours">
+            <text className="day">Saturday: </text><text>{this.props.restaurant.sat}</text>
+            </div>
+            <div className="day-hours">
+            <text className="day">Sunday: </text><text>{this.props.restaurant.sun}</text>
+            </div>
+        </div>
       </div>
-      </div>
+    </div>
+  </div>
     );
   }
 }
