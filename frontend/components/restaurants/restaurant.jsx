@@ -41,11 +41,6 @@ class Restaurant extends React.Component {
     this.props.createImage(data);
   }
 
-  uploadButton () {
-    if (this.props.currentUser) {
-      return <UploadButton updateKey= {this.updateKey.bind(this)} createImage={this.props.createImage} restaurantId = {this.props.params.restaurantId}/>;
-    }
-  }
 
   reviewButton() {
     const newReview  = (id) => (e) => {

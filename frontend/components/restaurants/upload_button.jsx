@@ -82,8 +82,6 @@ class UploadButton extends React.Component {
       url
     });
     this.closeModal();
-    console.log("It hit");
-    this.props.updateKey();
   }
 
 

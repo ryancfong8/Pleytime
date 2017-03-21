@@ -10,8 +10,8 @@
 .PhotoIndex {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  align-items: center;
+  width: 90%;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -36,4 +36,13 @@
   justify-content: space-between;
   align-items: center;
   width: 175px;
+}
+
+.Upload-Button {
+  border: 1px solid #000000;
+  margin-top: 5px;
+  background-color: #d32323;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #ffffff;
 }

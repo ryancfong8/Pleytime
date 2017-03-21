@@ -1,6 +1,7 @@
 import React from 'react';
 import starRating from '../starRating';
 import { Link } from 'react-router';
+import UploadButton from './upload_button';
 
 class RestaurantPhotos extends React.Component {
   constructor (props) {
@@ -17,6 +18,12 @@ class RestaurantPhotos extends React.Component {
     }
   }
 
+  uploadButton () {
+    if (this.props.currentUser) {
+      return <UploadButton createImage={this.props.createImage} restaurantId = {this.props.params.restaurantId}/>;
+    }
+  }
+
   render() {
     return(
       <div className = "PhotoPage">
@@ -28,10 +35,11 @@ class RestaurantPhotos extends React.Component {
             <text>{starRating(this.props.restaurant.averageRating)}</text>
             <text>{this.props.restaurant.numReviews} Reviews</text>
           </div>
+          {this.uploadButton()}
           </div>
           <div className="PhotoIndex">
           {this.props.photos.map((photo) => (
-            <img key={photo.id} src={photo.url} className = "Photo"/>
+            <img key={Math.random()} src={photo.url} className = "Photo"/>
           ))}
           </div>
         </div>

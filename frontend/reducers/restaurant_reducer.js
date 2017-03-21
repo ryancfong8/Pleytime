@@ -24,7 +24,7 @@ const RestaurantReducer = (oldState = nullRestaurant, action) => {
       return merge({}, action.restaurant);
     case RECEIVE_PHOTO:
       newRestaurant = merge({}, oldState);
-      newRestaurant.reviews.push(action.photo);
+      newRestaurant.photos.push(action.photo);
       return newRestaurant;
     case RECEIVE_REVIEW:
       newRestaurant = merge({}, oldState);
