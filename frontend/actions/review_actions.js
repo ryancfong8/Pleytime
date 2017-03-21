@@ -25,13 +25,13 @@ export const fetchReviews = () => dispatch => {
 };
 
 export const createReview = (data) => dispatch =>  {
-  return ReviewApiUtil.createReview(data).then(restaurant => dispatch(receiveRestaurant(restaurant)));
+  return ReviewApiUtil.createReview(data).then(review => dispatch(receiveReview(review)));
 };
 
 export const updateReview = (data) => dispatch =>  {
-  return ReviewApiUtil.updateReview(data).then(restaurant => dispatch(receiveRestaurant(restaurant)));
+  return ReviewApiUtil.updateReview(data).then(review => dispatch(receiveReview(review)));
 };
 
-export const deleteReview = (data) => dispatch =>  {
-  return ReviewApiUtil.deleteReview(data).then(restaurant => dispatch(receiveRestaurant(restaurant)));
+export const deleteReview = (id) => dispatch =>  {
+  return ReviewApiUtil.deleteReview(id).then(review => dispatch(removeReview(review)));
 };

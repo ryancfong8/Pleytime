@@ -12,7 +12,7 @@ class ReviewIndex extends React.Component {
         <h2>Reviews</h2>
         <ul className = "ReviewList">
         {this.props.reviews.map((review) => (
-          <ReviewIndexItem key = {Math.random()} deleteReview={this.props.deleteReview} review={review} currentUser = {window.currentUser} />
+          <ReviewIndexItem key = {Math.random()} deleteReview={this.props.deleteReview} review={review} restaurantId = {this.props.restaurantId} currentUser = {this.props.currentUser} />
         ))}
         </ul>
       </div>

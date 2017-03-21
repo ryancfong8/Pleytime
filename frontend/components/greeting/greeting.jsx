@@ -26,7 +26,7 @@ class Greeting extends React.Component {
   render() {
     return(
       <div className = "header">
-        <h1>Pleytime</h1>
+        <Link className="logo" to="/">Pleytime</Link>
         {this.props.currentUser ? this.personalGreeting(this.props.currentUser, this.props.logout) : this.sessionLinks()}
       </div>
     );

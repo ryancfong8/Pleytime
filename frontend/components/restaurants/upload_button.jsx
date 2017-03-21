@@ -72,9 +72,9 @@ class UploadButton extends React.Component {
   }
 
   handleSubmit(e) {
-    const url = this.state.url
-    const user_id = parseInt(this.state.user_id)
-    const restaurant_id = parseInt(this.state.restaurant_id)
+    const url = this.state.url;
+    const user_id = parseInt(this.state.user_id);
+    const restaurant_id = parseInt(this.props.restaurantId);
     e.preventDefault();
     this.props.createImage({
       restaurant_id,
@@ -90,7 +90,7 @@ class UploadButton extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.openModal}>Add Picture</button>
+        <button  className = "Upload-Button" onClick={this.openModal}>Add Photo</button>
 
         <Modal
           contentLabel="Modal"

@@ -5,15 +5,15 @@ const starRating = (rating) => {
   const emptyStar = <text>☆</text>;
   switch(rating) {
     case 5:
-      return <text>{star}{star}{star}{star}{star}</text>;
+      return <text className="Star-Rating-5">{star}{star}{star}{star}{star}</text>;
     case 4:
-      return <text>{star}{star}{star}{star}{emptyStar}</text>;
+      return <text className="Star-Rating-4">{star}{star}{star}{star}{emptyStar}</text>;
     case 3:
-      return <text>{star}{star}{star}{emptyStar}{emptyStar}</text>;
+      return <text className="Star-Rating-3">{star}{star}{star}{emptyStar}{emptyStar}</text>;
     case 2:
-      return <text>{star}{star}{emptyStar}{emptyStar}{emptyStar}</text>;
+      return <text className="Star-Rating-2">{star}{star}{emptyStar}{emptyStar}{emptyStar}</text>;
     case 1:
-      return <text>{star}{emptyStar}{emptyStar}{emptyStar}{emptyStar}</text>;
+      return <text className="Star-Rating-1">{star}{emptyStar}{emptyStar}{emptyStar}{emptyStar}</text>;
   }
 };
 

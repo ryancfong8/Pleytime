@@ -4,7 +4,8 @@ import { fetchReviews } from '../../actions/review_actions.js';
 import Restaurant from './restaurant.jsx';
 
 const mapStateToProps = (state, ownProps) => ({
-  restaurant: state.restaurant
+  restaurant: state.restaurant,
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({

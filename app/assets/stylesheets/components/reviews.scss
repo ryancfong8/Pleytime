@@ -2,9 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-left: 3px solid #ffffff;
-  border-right: 3px solid #ffffff;
-  width: 90%;
+  width: 100%;
 }
 
 .ReviewList {
@@ -12,6 +10,9 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+  margin-top: 10px;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
 }
 
 .ReviewContainer > h2 {
@@ -22,15 +23,18 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 15px;
-  border: 5px solid #ffffff;
+  border-bottom: 1px solid #cccccc;
   border-radius: 15px;
   width: 90%;
-  background-color: #fff2e6;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .Headline {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -46,5 +50,18 @@
 }
 
 .reviews {
-  width: 65%
+  width: 65%;
+  margin-top: 10px;
+}
+
+.Delete-Button {
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.Edit-Button {
+  border: 1px solid #000000;
+  border-radius: 5px;
 }

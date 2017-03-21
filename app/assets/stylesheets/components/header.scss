@@ -1,5 +1,5 @@
 .header {
-  background-color: #e60000;
+  background-color: #d32323;
   display: flex;
   justify-content: space-between;
   margin: auto;
@@ -8,12 +8,13 @@
   flex : 1 100%;
 }
 
-.header h1 {
+.logo {
   margin-left: 10px;
   color: #ffffff;
   font-weight: bold;
   font-family: "Papyrus";
-  background-color: #e60000;
+  background-color: inherit;
+  font-size: 32px;
 }
 
 
@@ -22,7 +23,7 @@
   justify-content:space-between;
   margin: auto;
   align-items:center;
-  background-color: #e60000;
+  background-color: inherit;
 }
 
 .login-signup button {
@@ -32,7 +33,7 @@
   padding-bottom: 15px;
   border-radius: 5px;
   margin: 10px;
-  background-color: #cc0000;
+  background-color: #bd1f1f;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -49,12 +50,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e60000;
+  background-color: #d32323;
 }
 .header-name {
   margin: 10px;
   color: #ffffff;
-  background-color: #e60000;
+  background-color: inherit;;
 }
 
 .header-button {
@@ -64,7 +65,7 @@
   padding-bottom: 15px;
   border-radius: 5px;
   margin: 10px;
-  background-color: #cc0000;
+  background-color: #bd1f1f;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
@@ -136,9 +137,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #e60000;
+  background-color: #d32323;
 }
 
 .form {
-  background-color: #e60000;
+  background-color: #d32323;
 }

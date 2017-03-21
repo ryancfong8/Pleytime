@@ -26,8 +26,10 @@ const Root = ({ store }) => {
       <Router history={ hashHistory }>
         <Route path="/" component={ App } >
           <IndexRoute component={ RestaurantsContainer } />
-          <Route path="restaurants/:restaurantId" component={RestaurantContainer}>
-          </Route>
+          <Route path="restaurants/:restaurantId" component={RestaurantContainer} />
+
+          <Route path="restaurants/:restaurantId/reviews/new" component={ReviewFormContainer} />
+          <Route path="restaurants/:restaurantId/reviews/:reviewId/edit" component={ReviewFormContainer} />
         </Route>
       </Router>
     </Provider>
@@ -35,5 +37,3 @@ const Root = ({ store }) => {
 };
 
 export default Root;
-
-// <Route path="reviews/:reviewId" component={ReviewFormContainer} />

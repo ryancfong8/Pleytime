@@ -390,52 +390,52 @@ photos = Photo.create([{
     body: "The chicken is very flavorful and the sauce is a must",
     rating: 5,
     restaurant_id: 1,
-    user_id: 2,
+    user_id: 2
     }, {
     headline: "It was just ok",
     body: "The chicken is not anything special",
     rating: 3,
     restaurant_id: 1,
-    user_id: 1,
+    user_id: 1
     },
     {
     headline: "Great tasting chicken!",
     body: "Chicken was great, but I wish there was more options",
     rating: 4,
     restaurant_id: 1,
-    user_id: 2,
+    user_id: 2
     },
     {
     headline: "Lives Up to the Hype",
     body: "Burma Superstar is awesome",
     rating: 5,
     restaurant_id: 2,
-    user_id: 2,
-    },{
-    headline: "Mhmmm, Tasty!",
+    user_id: 2
+    }, {
+    headline: "Mhmmm Tasty!",
     body: "San Tung has the best chicken wings!",
     rating: 5,
     restaurant_id: 3,
-    user_id:4,
+    user_id:4
     },
     {
     headline: "Best Boba in California",
     body: "Tpumps has many options and you can choose up to 3 flavors to mix in your drink.  I would come on Tuesdays for the free upgrade to Pumpbo",
     rating: 5,
     restaurant_id: 4,
-    user_id: 1,
+    user_id: 1
     },
     {
     headline: "Wait is Too Long",
     body: "We didn't want to wait so we left",
     rating: 1,
     restaurant_id: 4,
-    user_id: 2,
+    user_id: 2
     },
     {
     headline: "HRD Rocks!",
     body: "Unique food flavor and combination!",
     rating: 5,
     restaurant_id: 5,
-    user_id: 2,
+    user_id: 2
     }])

@@ -1,10 +1,12 @@
 import { connect } from 'react-redux';
 import { fetchReviews, createReview, updateReview } from '../../actions/review_actions';
+import ReviewForm from './review_form';
 
 const mapStateToProps = (state, ownProps) => {
   let formType = ownProps.params.reviewId ? "Update Review" : "New Review";
+  let review = state.restaurant.reviews.find((el) => el.id == ownProps.params.reviewId );
   return {
-    reviews: state.reviews,
+    review,
     formType
   };
 };
@@ -17,7 +19,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   };
 };
 
-// export default connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ReviewForm);

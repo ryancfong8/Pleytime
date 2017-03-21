@@ -3,13 +3,15 @@ import PhotoSlider from './restaurant_pic_slider';
 import UploadButton from './upload_button';
 import ReviewIndexContainer from "../reviews/review_container";
 import starRating from "../starRating";
+import { hashHistory} from "react-router";
 
 class Restaurant extends React.Component {
   constructor(props){
     super(props);
 
     this.postImage = this.postImage.bind(this);
-    this.state = { key: 1 };
+    this.state = this.props.currentUser;
+    // this.state = { key: 1 };
   }
 
   updateKey () {
@@ -39,23 +41,50 @@ class Restaurant extends React.Component {
     this.props.createImage(data);
   }
 
+  uploadButton () {
+    if (this.props.currentUser) {
+      return <UploadButton updateKey= {this.updateKey.bind(this)} createImage={this.props.createImage} restaurantId = {this.props.params.restaurantId}/>;
+    }
+  }
+
+  reviewButton() {
+    const newReview  = (id) => (e) => {
+      e.preventDefault();
+      let url = `restaurants/${this.props.params.restaurantId}/reviews/new`;
+      return hashHistory.push(url);
+    };
+    if (this.props.currentUser) {
+      return <button onClick={newReview(this.props.restaurant.id)} className="Review-Button">★ Write a Review</button>;
+    }
+    else {
+      return <text>Sign In to Write a Review!</text>;
+    }
+  }
+
   render() {
     return (
-      <div className='background'>
+    <div>
+      <div className = "first-half">
       <div className="restaurant-page">
-
+          <div className="r-name-buttons">
             <div className = "r-des">
               <h1>{this.props.restaurant.name}</h1>
               <div className="r-rating">
-                <text>Rating: {starRating(parseInt(this.props.restaurant.averageRating))}</text>
-                <text>     {this.props.restaurant.numReviews} Reviews</text>
+                <div>
+                  <text>Rating: {starRating(parseInt(this.props.restaurant.averageRating))}</text>
+                  <text>     {this.props.restaurant.numReviews} Reviews</text>
+                </div>
+              </div>
               <div className="r-price">
                 <text>Price: </text>
                 <text className="restaurant-index-price">{this.props.restaurant.price}</text>
               </div>
             </div>
+            <div className="buttons">
+              {this.uploadButton()}
+              {this.reviewButton()}
+            </div>
           </div>
-
             <div className="r-map-pics">
               <div className="r-map-info">
                   <div className="r-map">
@@ -73,10 +102,12 @@ class Restaurant extends React.Component {
                 ))}
               </div>
           </div>
-
+        </div>
+      </div>
+      <div className = "second-half">
       <div className='r-reviews-hours'>
         <div className="reviews">
-          <ReviewIndexContainer reviews={this.props.restaurant.reviews} restaurantId={this.props.params.restaurantId}/>
+          <ReviewIndexContainer reviews={this.props.restaurant.reviews} currentUser = {this.props.currentUser} restaurantId={this.props.params.restaurantId}/>
         </div>
         <div className="r-hours">
             <h3>Hours</h3>
@@ -104,7 +135,7 @@ class Restaurant extends React.Component {
         </div>
       </div>
     </div>
-  </div>
+    </div>
     );
   }
 }
@@ -114,5 +145,3 @@ export default Restaurant;
 //   <img src={this.props.restaurant.image_url} />
 // </div>
 // <PhotoSlider photos = {this.props.restaurant.photos} />
-
-// <UploadButton updateKey= {this.updateKey.bind(this)} createImage={this.props.createImage} restaurantId = {this.props.params.restaurantId}/>
