@@ -1,0 +1,39 @@
+.PhotoPage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.PhotoIndex {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.Photo {
+  height: 200px;
+  width: 200px;
+  margin: 30px;
+}
+
+.Photo:hover {
+  height: 250px;
+  width: 250px;
+}
+
+.Restaurant-Detail {
+  margin-top: 15px;
+}
+
+.rp-rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 175px;
+}

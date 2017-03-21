@@ -18,13 +18,15 @@ class ReviewForm extends React.Component {
   }
 
   componentDidMount () {
-    if (this.props.params.reviewId) {
+    if (this.props.formType === "Update Review" && this.props.params.reviewId ) {
       this.setState(this.props.review);
     }
   }
 
   componentWillReceiveProps (newProps) {
-    this.setState(newProps.review);
+    if (this.props.formType === "Update Review"){
+      this.setState(newProps.review);
+    }
   }
 
   update(property) {
@@ -59,16 +61,16 @@ class ReviewForm extends React.Component {
     return (
         <form className="ReviewForm"onSubmit={this.handleSubmit}>
           <h3>{text}</h3>
-          <div className='RF-rating'>
-            <text>Rating:     </text>
-            <ReactStars count={5} onChange={updateRating} half={false}/>
-          </div>
           <br />
           <label>Headline:
             <input className="review-headline-input" type="text" value={this.state.headline} onChange={this.update('headline')} />
           </label>
           <br />
             <textarea className="review-body-input" value={this.state.body} onChange={this.update('body')} />
+            <div className='RF-rating'>
+              <text>Rating:     </text>
+              <ReactStars count={5} onChange={updateRating} half={false}/>
+            </div>
           <input type="submit" value={text} />
         </form>
     );

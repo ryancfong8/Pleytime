@@ -61,6 +61,15 @@ class Restaurant extends React.Component {
     }
   }
 
+  allPhotosButton(){
+    const allPhotos = (id) => (e) => {
+      e.preventDefault();
+      let url = `restaurants/${this.props.params.restaurantId}/photos`;
+      return hashHistory.push(url);
+    };
+    return <button className="AllPhotos" onClick={allPhotos()}>See All Photos</button>;
+  }
+
   render() {
     return (
     <div>
@@ -81,7 +90,8 @@ class Restaurant extends React.Component {
               </div>
             </div>
             <div className="buttons">
-              {this.uploadButton()}
+
+              {this.allPhotosButton()}
               {this.reviewButton()}
             </div>
           </div>
@@ -97,7 +107,7 @@ class Restaurant extends React.Component {
                   <p>{this.props.restaurant.description}</p>
               </div>
               <div className="r-imgs">
-                {this.props.restaurant.photos.map((photo) => (
+                {this.props.restaurant.photos.slice(0, 3).map((photo) => (
                   <img className="scroll-image" key={photo.id} src={photo.url} />
                 ))}
               </div>
@@ -111,26 +121,25 @@ class Restaurant extends React.Component {
         </div>
         <div className="r-hours">
             <h3>Hours</h3>
-            <div className="day-hours">
-            <text className="day">Monday: </text><text>{this.props.restaurant.mon}</text>
-            </div>
-            <div className="day-hours">
-            <text className="day">Tuesday: </text><text>{this.props.restaurant.tue}</text>
-            </div>
-            <div className="day-hours">
-            <text className="day">Wednesday: </text><text>{this.props.restaurant.wed}</text>
-            </div>
-            <div className="day-hours">
-            <text className="day">Thursday: </text><text>{this.props.restaurant.thur}</text>
-            </div>
-            <div className="day-hours">
-            <text className="day">Friday: </text><text>{this.props.restaurant.fri}</text>
-            </div>
-            <div className="day-hours">
-            <text className="day">Saturday: </text><text>{this.props.restaurant.sat}</text>
-            </div>
-            <div className="day-hours">
-            <text className="day">Sunday: </text><text>{this.props.restaurant.sun}</text>
+            <div className="times">
+              <div className="day-hours">
+                <text className="day">Monday: </text> <text>{this.props.restaurant.mon}</text>
+                <text className="day">Tuesday: </text> <text>{this.props.restaurant.tue}</text>
+                <text className="day">Wednesday: </text> <text>{this.props.restaurant.wed}</text>
+                <text className="day">Thursday: </text> <text>{this.props.restaurant.thur}</text>
+                <text className="day">Friday: </text> <text>{this.props.restaurant.fri}</text>
+                <text className="day">Saturday: </text> <text>{this.props.restaurant.sat}</text>
+                <text className="day">Sunday: </text> <text>{this.props.restaurant.sun}</text>
+                </div>
+              <div className = "r-times">
+
+
+
+
+
+
+
+              </div>
             </div>
         </div>
       </div>
