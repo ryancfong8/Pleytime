@@ -16,14 +16,15 @@
 }
 
 .Photo {
-  height: 200px;
-  width: 200px;
-  margin: 30px;
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 .Photo:hover {
-  height: 250px;
-  width: 250px;
+  cursor: pointer;
+  opacity: .7;
 }
 
 .Restaurant-Detail {
@@ -45,4 +46,28 @@
   border-radius: 5px;
   font-weight: bold;
   color: #ffffff;
+}
+
+.image-form-dropzone {
+  border: 5px dashed #6a6a6a;
+
+}
+
+.image-form-dropzone > p {
+  height: 400px;
+  text-align: center;
+}
+
+.image-form-dropzone:hover {
+  cursor: pointer;
+}
+
+input[type=submit]{
+  border: 1px solid #000000;
+}
+
+.BigPic {
+  width: 600px;
+  height: 600px;
+  border-radius: 5px;
 }

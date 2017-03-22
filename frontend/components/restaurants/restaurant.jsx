@@ -4,6 +4,7 @@ import UploadButton from './upload_button';
 import ReviewIndexContainer from "../reviews/review_container";
 import starRating from "../starRating";
 import { hashHistory} from "react-router";
+import PhotoIndexItem from '../photos/photo_index_item'
 
 class Restaurant extends React.Component {
   constructor(props){
@@ -75,12 +76,12 @@ class Restaurant extends React.Component {
               <h1>{this.props.restaurant.name}</h1>
               <div className="r-rating">
                 <div>
-                  <text>Rating: {starRating(parseInt(this.props.restaurant.averageRating))}</text>
-                  <text>     {this.props.restaurant.numReviews} Reviews</text>
+                  <text className="Gray-text">Rating: {starRating(parseInt(this.props.restaurant.averageRating))}</text>
+                  <text className="Gray-text">     {this.props.restaurant.numReviews} Reviews</text>
                 </div>
               </div>
               <div className="r-price">
-                <text>Price: </text>
+                <text className="Gray-text">Price: </text>
                 <text className="restaurant-index-price">{this.props.restaurant.price}</text>
               </div>
             </div>
@@ -103,7 +104,7 @@ class Restaurant extends React.Component {
               </div>
               <div className="r-imgs">
                 {this.props.restaurant.photos.slice(0, 3).map((photo) => (
-                  <img className="scroll-image" key={photo.id} src={photo.url} />
+                  <PhotoIndexItem photo={photo} key={photo.id}/>
                 ))}
               </div>
           </div>

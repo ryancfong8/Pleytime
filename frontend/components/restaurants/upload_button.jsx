@@ -75,6 +75,7 @@ class UploadButton extends React.Component {
     const url = this.state.url;
     const user_id = parseInt(this.state.user_id);
     const restaurant_id = parseInt(this.props.restaurantId);
+    // const review_id = this.props.reviewId;
     e.preventDefault();
     this.props.createImage({
       restaurant_id,
@@ -82,6 +83,13 @@ class UploadButton extends React.Component {
       url
     });
     this.closeModal();
+    this.setState({
+      modalOpen: false,
+      url:"",
+      caption: "",
+      user_id: window.currentUser.id,
+      restaurant_id: this.props.restaurantId
+    });
   }
 
 

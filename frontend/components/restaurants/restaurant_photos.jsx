@@ -2,6 +2,7 @@ import React from 'react';
 import starRating from '../starRating';
 import { Link } from 'react-router';
 import UploadButton from './upload_button';
+import PhotoIndexItem from '../photos/photo_index_item';
 
 class RestaurantPhotos extends React.Component {
   constructor (props) {
@@ -39,7 +40,7 @@ class RestaurantPhotos extends React.Component {
           </div>
           <div className="PhotoIndex">
           {this.props.photos.map((photo) => (
-            <img key={Math.random()} src={photo.url} className = "Photo"/>
+            <PhotoIndexItem key={Math.random()} photo={photo} />
           ))}
           </div>
         </div>

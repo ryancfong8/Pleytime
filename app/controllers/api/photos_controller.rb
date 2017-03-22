@@ -1,9 +1,8 @@
 class Api::PhotosController < ApplicationController
   def create
     @photo = Photo.new(photo_params)
-    @restaurant = @photo.restaurant
     if @photo.save
-      render 'api/photos/index'
+      render 'api/photos/show'
     else
       render json: @photo.errors.full_messages, status: 422
     end
@@ -12,7 +11,7 @@ class Api::PhotosController < ApplicationController
   def destroy
     @photo = Photo.find(params[:id])
     @photo.destroy
-    render 'api/photos/index'
+    render 'api/photos/show'
   end
 
   private

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactStars from 'react-stars';
 import { hashHistory } from 'react-router';
+import starRating from '../starRating';
 
 class ReviewForm extends React.Component {
   constructor (props) {
@@ -36,6 +37,18 @@ class ReviewForm extends React.Component {
     };
   }
 
+  photo () {
+    if (this.props.review.photo){
+      return <img src={this.props.review.photo.url} />;
+    }
+  }
+
+  uploadButton () {
+    if (this.props.currentUser) {
+      return <UploadButton createImage={this.props.createImage} reviewId={this.props.params.reviewId} restaurantId = {this.props.params.restaurantId}/>;
+    }
+  }
+
   handleSubmit(e) {
      const form = {
       headline: this.state.headline,
@@ -52,10 +65,17 @@ class ReviewForm extends React.Component {
     return hashHistory.push(`restaurants/${this.props.params.restaurantId}`);
   }
 
+  yourRating () {
+    if (this.state.rating) {
+      return <text>Your Rating: {starRating(this.state.rating)}</text>;
+    }
+  }
+
 
   render () {
     const updateRating = (newRating) => {
       this.rating = newRating;
+      this.setState({rating: newRating});
     };
     const text = this.props.formType === 'New Review' ? "Create Review" : "Update Review";
     return (
@@ -71,6 +91,7 @@ class ReviewForm extends React.Component {
               <text>Rating:     </text>
               <ReactStars count={5} onChange={updateRating} half={false}/>
             </div>
+            {this.yourRating()}
           <input type="submit" value={text} />
         </form>
     );

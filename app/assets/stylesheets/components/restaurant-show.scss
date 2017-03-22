@@ -112,7 +112,6 @@
   align-items: center;
   width: 100%;
   margin-bottom: 20px;
-  overflow: scroll;
   background-color: inherit;
   height: 275px;
 }
@@ -179,7 +178,6 @@
 .buttons {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
   width: 40%;
   align-items: center;
 
@@ -226,16 +224,27 @@
 .AllPhotos {
   border: 1px solid #000000;
   border-radius: 5px;
-  background-color: #f2bd79;
+  background-color: #fafafa;
   width: 110px;
   height: 24px;
-  font-size: 14px;
+  font-size: 12px;
+  margin-left: 20px;
+  color: #6b6b6b;
+  font-weight: bold;
 }
 
 .AllPhotos:hover {
-  background-color: #fec011;
+  background-color: #ffffff;
 }
 
+.scroll-image {
+  border-radius: 5px;
+}
+
+
+.Gray-text {
+  color: #6a6a6a;
+}
 
 
 

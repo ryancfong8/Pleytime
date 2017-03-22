@@ -36,7 +36,7 @@ class ReviewIndexItem extends React.Component {
       <li className="ReviewListItem">
         <div className="rating-date">
           <text className="re-rating">Rating: {starRating(this.props.review.rating)}</text>
-          <text>{this.props.review.created_at}</text>
+          <text className="Gray-text">{this.props.review.created_at}</text>
           {this.deleteButton()}
           {this.editButton()}
         </div>
