@@ -9,8 +9,8 @@ const nullRestaurant = {
   address: "",
   price: "",
   hours: "",
-  lat: "",
-  long: "",
+  lat: 37.773972,
+  long: -122.431297,
   image_url: "",
   photos: [],
   reviews: []

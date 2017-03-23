@@ -17,10 +17,10 @@ export const receiveRestaurant = (restaurant) =>({
 export const receivePhoto = (photo) => ({
   type: RECEIVE_PHOTO,
   photo
-})
+});
 
-export const fetchRestaurants = () => dispatch => {
-  return RestaurantApiUtil.fetchRestaurants().then(restaurants=>dispatch(receiveAllRestaurants(restaurants)));
+export const fetchRestaurants = (filters) => dispatch => {
+  return RestaurantApiUtil.fetchRestaurants(filters).then(restaurants=>dispatch(receiveAllRestaurants(restaurants)));
 };
 
 export const fetchRestaurant = (id) => dispatch => {

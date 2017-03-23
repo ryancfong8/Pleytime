@@ -4,7 +4,8 @@ import UploadButton from './upload_button';
 import ReviewIndexContainer from "../reviews/review_container";
 import starRating from "../starRating";
 import { hashHistory} from "react-router";
-import PhotoIndexItem from '../photos/photo_index_item'
+import PhotoIndexItem from '../photos/photo_index_item';
+import SingleRestaurantMap from './single_restaurant_map';
 
 class Restaurant extends React.Component {
   constructor(props){
@@ -94,7 +95,7 @@ class Restaurant extends React.Component {
             <div className="r-map-pics">
               <div className="r-map-info">
                   <div className="r-map">
-                    <h2>Map</h2>
+                    <SingleRestaurantMap restaurants = {[this.props.restaurant]} />
                   </div>
                   <text>{this.props.restaurant.address}</text>
                   <text>{this.props.restaurant.city_params}</text>

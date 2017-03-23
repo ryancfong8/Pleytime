@@ -4,6 +4,7 @@ import * as APIUtil from './util/sessions_api_util.js';
 import configureStore from './store/store.js';
 import Root from './components/root';
 import { login, signup, logout } from './actions/sessions_actions.js';
+import { fetchRestaurants } from './actions/restaurants_actions.js';
 import Modal from 'react-modal';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,4 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     ReactDOM.render(<Root store={store} />, root);
     window.store = store;
+    window.fetchRestaurants = fetchRestaurants;
 });

@@ -16,7 +16,12 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def index
-    @restaurants = Restaurant.all
+    restaurants = bounds ? Restaurants.in_bounds(bounds) : Restaurant.all
+    if params[:query]
+      restaurants = restaurants.where('name ILIKE ?', "%#{params[:query]}%")
+    end
+    @restaurants = restaurants
+    render :index
   end
 
   def show
@@ -34,5 +39,9 @@ class Api::RestaurantsController < ApplicationController
 
   def restaurant_params
     params.require(:restaurant).permit(:name, :description, :address, :hours, :price, :lat, :long,)
+  end
+
+  def bounds
+    params[:bounds]
   end
 end

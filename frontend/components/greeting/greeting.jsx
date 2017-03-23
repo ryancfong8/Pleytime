@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
+import SearchBar from "./search_bar";
 
 import SessionFormContainer from '../sessions/session_form_container';
 
@@ -27,6 +28,7 @@ class Greeting extends React.Component {
     return(
       <div className = "header">
         <Link className="logo" to="/">Pleytime</Link>
+        <SearchBar fetchRestaurants={this.props.fetchRestaurants}/>
         {this.props.currentUser ? this.personalGreeting(this.props.currentUser, this.props.logout) : this.sessionLinks()}
       </div>
     );
