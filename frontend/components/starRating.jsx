@@ -14,6 +14,8 @@ const starRating = (rating) => {
       return <text className="Star-Rating-2">{star}{star}{emptyStar}{emptyStar}{emptyStar}</text>;
     case 1:
       return <text className="Star-Rating-1">{star}{emptyStar}{emptyStar}{emptyStar}{emptyStar}</text>;
+    case 0:
+      return <text className="Star-Rating-0">{emptyStar}{emptyStar}{emptyStar}{emptyStar}{emptyStar}</text>;
   }
 };
 

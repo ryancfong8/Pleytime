@@ -8,9 +8,10 @@ const RestaurantIndexItem = (props) => (
       <img className = "picture" src={props.restaurant.photos[0].url} />
       <div className="title-properties">
         <Link className="restaurant-index-name" to={`/restaurants/${props.restaurant.id}`}>{props.restaurant.name}</Link>
-        <text className = "restaurant-index-rating">Rating: {starRating(props.restaurant.averageRating)}  {props.restaurant.numReviews} Reviews</text>
+        <text className = "Gray">{starRating(props.restaurant.averageRating)} </text>
+        <text className = "Gray">{props.restaurant.numReviews} Reviews</text>
         <div>
-          <text>Price: </text>
+          <text className= "Gray"></text>
           <text className="restaurant-index-price">{props.restaurant.price}</text>
         </div>
       </div>

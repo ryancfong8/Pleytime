@@ -113,7 +113,8 @@ class SessionForm extends React.Component {
 					contentLabel="Modal"
 					isOpen={this.state.modalOpen}
 					onRequestClose={this.closeModal}
-					style={ModalStyle}>
+					style={ModalStyle}
+					overlayClassName="Modal-Overlay">
 					<form className="form">
 						<h3 className = "modal-title">Welcome to Pleytime!</h3>
 						{this.renderErrors()}

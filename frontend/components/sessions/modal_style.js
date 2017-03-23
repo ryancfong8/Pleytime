@@ -17,7 +17,8 @@ const ModalStyle = {
     transform             : 'translate(-50%, -50%)',
     borderRadius          : '20px',
     background            : '#d32323',
-    color                 : '#ffffff'
+    color                 : '#ffffff',
+
   }
 };
 
