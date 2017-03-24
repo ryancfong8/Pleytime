@@ -6,13 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-ryan = User.create({username: 'Ryan', password: "password"})
+ryan = User.create({username: 'Ryan F', password: "password"})
 
 guestUser = User.create({username: 'Guest User', password: "password"})
-bob = User.create({username: 'Bob', password: "password"})
-jacob = User.create({username: 'Jacob', password: "password"})
+david = User.create({username: 'David M', password: "password"})
+jacob = User.create({username: 'Jacob G', password: "password"})
 stevieD = User.create({username: 'Stevie D', password: "password"})
-john = User.create({username: 'John', password: "password"})
+john = User.create({username: 'John C', password: "password"})
+kelsey = User.create({username: 'Kelsey W', password: "password"})
+amy = User.create({username: 'Amy Y', password: "password"})
+alexis = User.create({username: 'Alexis P', password: "password"})
+stephanie = User.create({username: 'Stephanie L', password: "password"})
 
 restaurants = Restaurant.create([{
   name: "Rooster & Rice",
@@ -147,7 +151,7 @@ restaurants = Restaurant.create([{
       sun:"11:30am - 3:00pm, 5:00pm - 9:00pm",
     },
       {
-      name: "Mr Holmes Bakehouse",
+      name: "Mr. Holmes Bakehouse",
       description: "A bakery that is famous for their most sold out item: cruffins",
       address: "1042 Larkin St",
       price: "$$",
@@ -264,7 +268,262 @@ restaurants = Restaurant.create([{
       fri: "11:30am - 3:00pm, 6:00pm - 9:00pm",
       sat: "11:30am - 3:00pm, 6:00pm - 9:00pm",
       sun: "11:30am - 3:00pm, 6:00pm - 9:00pm"
-      }]);
+      },
+    {
+    name: "Turtle Tower",
+    description: "Vietnamese Pho noodle soup restaurant.",
+    address: "5716 Geary Blvd",
+    price:"$",
+    lat:37.780547,
+    long:-122.480908,
+    city_params:"San Francisco, CA 94121",
+    phone:"(415) 221-9890",
+    mon:"10:00am - 8:00pm",
+    tue: "10:00am - 8:00pm",
+    wed:"Closed",
+    thur:"10:00am - 8:00pm",
+    fri:"10:00am - 9:00pm",
+    sat:"10:00am - 9:00pm",
+    sun:"10:00am - 8:00pm"
+    },
+    {
+    name: "Mensho Tokyo",
+    description: "Japanese Cuisine Restaurant, specializing in ramen noodle soup.",
+    address: "672 Geary St",
+    price:"$$",
+    lat:37.7786599,
+    long:-122.414305,
+    city_params:"San Francisco, CA 94102",
+    phone:"(415) 800-8345",
+    mon:"Closed",
+    tue: "5:00pm - 11:30pm",
+    wed:"5:00pm - 11:30pm",
+    thur:"5:00pm - 11:30pm",
+    fri:"5:00pm - 11:30pm",
+    sat:"5:00pm - 11:30pm",
+    sun:"5:00pm - 11:30pm"
+    },
+    {
+    name: "Dragon Beaux",
+    description: "A Chinese restaurant known for their dim sum and famous item: Five Guys Xiao Long Bao. Each of the five dumplings comes in a different color and flavor.",
+    address: "5700 Geary Blvd",
+    price:"$$",
+    lat:37.780500,
+    long:-122.480722,
+    city_params:"San Francisco, CA 94121",
+    phone:"(415) 333-8899",
+    mon:"11:00am - 2:30pm, 5:30pm - 10:00pm",
+    tue: "11:00am - 2:30pm, 5:30pm - 10:00pm",
+    wed:"11:00am - 2:30pm, 5:30pm - 10:00pm",
+    thur:"11:00am - 2:30pm, 5:30pm - 10:00pm",
+    fri:"11:00am - 2:30pm, 5:30pm - 10:00pm",
+    sat:"10:00am - 3:00pm, 5:30pm - 10:00pm",
+    sun:"11:00am - 2:30pm, 5:30pm - 10:00pm"
+    },
+    {
+    name: "Hog Island Oyster Co.",
+    description: "Seafood Bar and Grill with Happy Hour",
+    address: "1 Ferry Bldg",
+    price:"$$",
+    lat: 37.795570,
+    long: -122.393321,
+    city_params:"San Francisco, CA 94111",
+    phone:"(415) 391-7117",
+    mon:"11:00am - 9:00pm",
+    tue: "11:00am - 9:00pm",
+    wed:"11:00am - 9:00pm",
+    thur:"11:00am - 9:00pm",
+    fri:"11:00am - 9:00pm",
+    sat:"11:00am - 9:00pm",
+    sun:"11:00am - 9:00pm"
+    },
+    {
+    name: "Boba Guys",
+    description: "Boba Tea Cafe with unique flavors and toppings",
+    address: "429 Stockton St",
+    price:"$",
+    lat: 37.790003,
+    long:-122.407301,
+    city_params:"San Francisco, CA 94108",
+    phone:"Phone: None",
+    mon:"Closed",
+    tue: "8:00am - 9:00pm",
+    wed:"8:00am - 9:00pm",
+    thur:"8:00am - 9:00pm",
+    fri:"8:00am - 9:00pm",
+    sat:"8:00am - 9:00pm",
+    sun:"8:00am - 9:00pm"
+    },
+    {
+    name: "Bi-Rite Creamery",
+    description: "Ice cream parlor",
+    address: "3692 18th St",
+    price:"$",
+    lat: 37.761623,
+    long:-122.425742,
+    city_params:"San Francisco, CA 94110",
+    phone:"(415) 626-5600",
+    mon:"11:00am - 10:00pm",
+    tue: "11:00am - 10:00pm",
+    wed:"11:00am - 10:00pm",
+    thur:"11:00am - 10:00pm",
+    fri:"11:00am - 10:00pm",
+    sat:"11:00am - 10:00pm",
+    sun:"11:00am - 10:00pm"
+    },
+    {
+    name: "Crustacean Restaurant",
+    description: "An Asian fusion/Vietnamese restaurant known for their crab, seafood, and garlic noodles.",
+    address: "1475 Polk St Ste 6",
+    price:"$$$",
+    lat:37.790297,
+    long:-122.420915,
+    city_params:"San Francisco, CA 94109",
+    phone:"(415) 776-2722",
+    mon:"5:00pm - 9:00pm",
+    tue: "5:00pm - 9:00pm",
+    wed:"5:00pm - 9:00pm",
+    thur:"5:00pm - 9:00pm",
+    fri:"5:00 pm - 10:00 pm",
+    sat:"5:00 pm - 10:00 pm",
+    sun:"11:30am - 2:30pm, 5:00 pm - 9:00 pm"
+    },
+    {
+    name: "Brenda’s French Soul Food",
+    description: "Breakfast and Brunch French Restaurant",
+    address: "652 Polk St",
+    price:"$$",
+    lat:37.782912,
+    long:-122.419015,
+    city_params:"San Francisco, CA 94102",
+    phone:"(415) 345-8100",
+    mon:"8:00am - 3:00pm",
+    tue: "8:00am - 3:00pm",
+    wed:"8:00am - 10:00pm",
+    thur:"8:00am - 10:00pm",
+    fri:"8:00am - 10:00pm",
+    sat:"8:00am - 10:00pm",
+    sun:"8:00am - 8:00pm"
+    },
+    {
+    name: "The House",
+    description: "Asian Fusion Seafood Restaurant",
+    address: "1230 Grant Ave",
+    price:"$$$",
+    lat: 37.798470,
+    long: -122.407051,
+    city_params:"San Francisco, CA 94133",
+    phone:"(415) 986-8612",
+    mon:"11:30am - 3:00pm, 5:30pm - 10:00pm",
+    tue: "11:30am - 3:00pm, 5:30pm - 10:00pm",
+    wed:"11:30am - 3:00pm, 5:30pm - 10:00pm",
+    thur:"11:30am - 3:00pm, 5:30pm - 10:00pm",
+    fri:"11:30am - 3:00pm, 5:30pm - 10:00pm",
+    sat:"11:30am - 3:00pm, 5:30pm - 10:00pm",
+    sun:"11:30am - 3:00pm, 5:30pm - 10:00pm"
+    },
+    {
+    name: "Aina",
+    description: "Breakfast and Brunch, Hawaiian, Asian Fusion Restaurant",
+    address: "900 22nd St",
+    price:"$$",
+    lat: 37.757939,
+    long:-122.390416,
+    city_params:"San Francisco, CA 94107",
+    phone:"(415) 814-3815",
+    mon:"Closed",
+    tue: "5:30pm - 10:00pm",
+    wed:"10:00am - 2:30pm, 5:30pm - 10:00pm",
+    thur:"10:00am - 2:30pm, 5:30pm - 10:00pm",
+    fri:"10:00am - 2:30pm, 5:30pm - 10:00pm",
+    sat:"9:00am - 2:30pm, 5:30pm - 10:00pm",
+    sun:"9:00am - 2:30pm"
+    },
+    {
+    name: "Onigilly",
+    description: "A Japanese fast food place specializing in rice balls with a savory filling wrapped in seaweed.",
+    address: "4 Embarcadero Ctr",
+    price:"$",
+    lat: 37.795065,
+    long: -122.396451,
+    city_params:"San Francisco, CA 94111",
+    phone:"(415) 956-2075",
+    mon:"11:00am - 3:00pm",
+    tue: "11:00am - 3:00pm",
+    wed:"11:00am - 3:00pm",
+    thur:"11:00am - 3:00pm",
+    fri:"11:00am - 3:00pm",
+    sat:"11:00am - 3:00pm",
+    sun:"11:00am - 3:00pm"
+    },
+    {
+    name: "The Chairman",
+    description: "A Taiwanese place/food truck that is known for their various kinds of baos.",
+    address: "670 Larkin St",
+    price:"$",
+    lat: 37.784069,
+    long: -122.417594,
+    city_params:"San Francisco, CA 94109",
+    phone:"(415) 813-8800",
+    mon:"11:30am - 9:00pm",
+    tue: "11:30am - 9:00pm",
+    wed:"11:30am - 9:00pm",
+    thur:"11:30am - 9:00pm",
+    fri:"11:30am - 9:00pm",
+    sat:"11:30am - 9:00pm",
+    sun:"11:30am - 7:00pm"
+    },
+    {
+    name: "Kitchen Story",
+    description: "Breakfast & Brunch, Asian Fusion, American Restaurant",
+    address: "3499 16th St",
+    price:"$$",
+    lat: 37.764176,
+    long: -122.430668,
+    city_params:"San Francisco, CA 94114",
+    phone:"(415) 525-4905",
+    mon:"8:00am - 3:00pm, 5:00pm - 10:00pm",
+    tue: "8:00am - 3:00pm, 5:00pm - 10:00pm",
+    wed:"8:00am - 3:00pm, 5:00pm - 10:00pm",
+    thur:"8:00am - 3:00pm, 5:00pm - 10:00pm",
+    fri:"8:00am - 3:00pm, 5:00pm - 10:30pm",
+    sat:"8:00am - 3:00pm, 5:00pm - 10:30pm",
+    sun:"8:00am - 3:00pm, 5:00pm - 10:00pm"
+    },
+    {
+    name: "Alexander’s Steakhouse",
+    description: "High Class SteakHouse Restaurant",
+    address: "448 Brannan St",
+    price:"$$$$",
+    lat: 37.779306,
+    long: -122.395699,
+    city_params:"San Francisco, CA 94107",
+    phone:" (415) 495-1111",
+    mon:"5:30pm - 9:00pm",
+    tue: "5:30pm - 9:00pm",
+    wed:"5:30pm - 9:00pm",
+    thur:"5:30pm - 9:00pm",
+    fri:"5:30pm - 10:00pm",
+    sat:"5:30pm - 10:00pm",
+    sun:"5:30pm - 9:00pm"
+    },
+    {
+    name: "Lemonade",
+    description: "American cafeteria style restaurant with sandwiches, salads, and a variety of juices and lemonades",
+    address: "16 West Portal",
+    price:"$$",
+    lat: 37.740823,
+    long: -122.466330,
+    city_params:"San Francisco, CA 94127",
+    phone:"(415) 329-5111",
+    mon:"11:00am - 9:00pm",
+    tue: "11:00am - 9:00pm",
+    wed:"11:00am - 9:00pm",
+    thur:"11:00am - 9:00pm",
+    fri:"11:00am - 9:00pm",
+    sat:"11:00am - 9:00pm",
+    sun:"11:00am - 9:00pm"
+    }]);
 
 
 photos = Photo.create([{
@@ -387,6 +646,81 @@ photos = Photo.create([{
   restaurant_id:15,
   user_id:1,
   url: "http://res.cloudinary.com/ryancfong8/image/upload/v1489977770/348s_wivygr.jpg"
+  },
+  {
+    restaurant_id:16,
+    user_id:1,
+    url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490345720/348s_tdqiqf.jpg"
+  },
+  {
+  restaurant_id:17,
+  user_id:1,
+  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346123/mensho-tokyo-sf06_xvmum1.jpg"
+  },
+  {
+  restaurant_id:18,
+  user_id:1,
+  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346244/Bauer0419_Dragon_0906_cnciwl.jpg"
+  },
+  {
+  restaurant_id:19,
+  user_id:1,
+  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346362/home11_hukpx9.jpg"
+  },
+  {
+  restaurant_id:20,
+  user_id:1,
+  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346414/Boba-Guys-Milk-Tea-and-Snack-Bar-in-San-Francisco-CA_nbad1f.jpg"
+  },
+  {
+  restaurant_id:21,
+  user_id:1,
+  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346465/4531db19397690437eeddf5dcb176cc2_knrzxv.jpg"
+  },
+  {
+  restaurant_id:22,
+  user_id:1,
+  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346592/crustaceans_banner1_bbsbui.jpg"
+  },
+  {
+  restaurant_id:23,
+  user_id:1,
+  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346694/brendas-003_e89sie.jpg"
+  },
+  {
+  restaurant_id:24,
+  user_id:1,
+  url:"https://res.cloudinary.com/ryancfong8/image/upload/t_media_lib_thumb/v1490346817/house-exterior_x6ysuf.jpg"
+  },
+  {
+  restaurant_id:25,
+  user_id:1,
+  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346857/aina-1010595_vlyxpp.jpg"
+  },
+  {
+  restaurant_id:26,
+  user_id:1,
+  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346922/untitled-65_bec4lb.png"
+  },
+  {
+  restaurant_id:27,
+  user_id:1,
+  url:"https://res.cloudinary.com/ryancfong8/image/upload/t_media_lib_thumb/v1490346994/9750fd26ed1afb702b3f3ae02de98e9a_y9otcf.jpg"
+  },
+  {
+  restaurant_id:28,
+  user_id:1,
+  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490347083/thumb_600_ry5aww.jpg"
+  },
+  {
+  restaurant_id:29,
+  user_id:1,
+  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490347238/Alexander_27s_20Steakhouse_20San_20Francisco_20Wedding_203_main_lm40m6.jpg"
+  },
+  {
+  restaurant_id:30,
+  user_id:1,
+  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490347282/lemonade_aruwy7.jpg"
   }])
 
   reviews = Review.create([{
@@ -442,4 +776,12 @@ photos = Photo.create([{
     rating: 5,
     restaurant_id: 5,
     user_id: 2
-    }])
+    }
+    # {
+    # headline: "",
+    # body: "",
+    # rating:,
+    # restaurant_id:,
+    # user_id:
+    # }
+    ])

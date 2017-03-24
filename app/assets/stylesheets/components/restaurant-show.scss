@@ -166,10 +166,10 @@
 }
 
 .Review-Button {
-  border: 1px solid #000000;
+  // border: 1px solid #000000;
   width: 140px;
   height: 25px;
-  font-size:14px;
+  font-size:16px;
   background-color: #bd1f1f;
   border-radius: 3px;
   color: #ffffff;
@@ -182,15 +182,15 @@
 }
 
 .AllPhotos {
-  border: 1px solid #000000;
+  // border: 1px solid #000000;
   border-radius: 3px;
-  background-color: #fafafa;
+  background-color: #d32323;
   width: 150px;
   height: 25px;
   font-size: 13px;
   margin-left: 20px;
   margin-right: 20px;
-  color: #6b6b6b;
+  color: #ffffff;
   font-weight: bold;
   text-align: center;
   // display: flex;
@@ -199,7 +199,24 @@
 }
 
 .AllPhotos:hover {
-  background-color: #ffffff;
+  background-color: #990000;
+}
+
+.Upload-Button {
+  // border: 1px solid #000000;
+  // margin-top: 5px;
+  background-color: #d32323;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  width:100px;
+  height: 25px;
+  font-size: 13px;
+}
+
+.Upload-Button:hover {
+  background-color: #990000;
 }
 
 .buttons {

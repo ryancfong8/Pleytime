@@ -3,6 +3,7 @@ import Dropzone from 'react-dropzone';
 import request from 'superagent';
 import Modal from 'react-modal';
 import { hashHistory } from 'react-router';
+import ModalStyle from '../sessions/modal_style';
 
 const CLOUDINARY_UPLOAD_PRESET = 'jmpbzyij';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/ryancfong8/image/upload';
@@ -101,9 +102,10 @@ class UploadButton extends React.Component {
         <Modal
           contentLabel="Modal"
           isOpen = {this.state.modalOpen}
-          onRequestClose={this.closeModal}>
+          onRequestClose={this.closeModal}
+          style={ModalStyle}>
 
-          <form onSubmit={this.handleSubmit}>
+          <form className="UploadForm"onSubmit={this.handleSubmit}>
             <input
               type="hidden"
               value={this.state.url}
@@ -113,7 +115,8 @@ class UploadButton extends React.Component {
             <div>
               { this.state.url === '' ? null :
                 <div>
-                  <img src={this.state.url} />
+                  <text>Preview</text>
+                  <img className="preview" src={this.state.url} />
                 </div>}
             </div>
             <br />
@@ -130,15 +133,11 @@ class UploadButton extends React.Component {
             <br />
             <br />
 
-            <input
-              type="text"
-              placeholder="Insert Caption Here"
-              value={this.state.caption}
-              onChange={this.update("caption")}
-            />
+
             <br />
             <br />
             <input
+              className="submit-upload"
             type="submit"
             value="Upload"
             />
@@ -168,3 +167,10 @@ export default UploadButton;
 //     );
 //   }
 // }
+
+// <input
+//   type="text"
+//   placeholder="Insert Caption Here"
+//   value={this.state.caption}
+//   onChange={this.update("caption")}
+// />

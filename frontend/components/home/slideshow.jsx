@@ -30,16 +30,16 @@ class SlideShow extends React.Component {
     return (
         <div id="slideshow">
           <div className="slide-border">
-            <img className="slide-image" src="http://res.cloudinary.com/ryancfong8/image/upload/v1490289454/IMG_2619_gwrrtv.jpg"/>
+            <img className="slide-image" src="http://res.cloudinary.com/ryancfong8/image/upload/v1490348070/IMG_3694_ckrqgu.jpg"/>
           </div>
           <div className="slide-border">
             <img className="slide-image" src="http://res.cloudinary.com/ryancfong8/image/upload/v1490289472/IMG_2208_pslane.jpg"/>
           </div>
           <div className="slide-border">
-            <img className="slide-image" src="http://res.cloudinary.com/ryancfong8/image/upload/v1490289490/IMG_3315_omccbb.jpg"/>
+            <img className="slide-image" src="http://res.cloudinary.com/ryancfong8/image/upload/v1490346694/brendas-003_e89sie.jpg"/>
           </div>
           <div className="slide-border">
-            <img className="slide-image" src="http://res.cloudinary.com/ryancfong8/image/upload/v1490289512/IMG_2620_lsakfx.jpg"/>
+            <img className="slide-image" src="http://res.cloudinary.com/ryancfong8/image/upload/v1490346857/aina-1010595_vlyxpp.jpg"/>
           </div>
         </div>
     );
