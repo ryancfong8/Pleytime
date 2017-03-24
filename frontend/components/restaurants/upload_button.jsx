@@ -16,8 +16,7 @@ class UploadButton extends React.Component {
       modalOpen: false,
       url:"",
       caption: "",
-      user_id: window.currentUser.id,
-      restaurant_id: this.props.restaurantId
+
     };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);

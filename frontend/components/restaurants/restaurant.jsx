@@ -85,7 +85,7 @@ class Restaurant extends React.Component {
 
   uploadButton () {
     if (this.props.currentUser) {
-      return <UploadButton createImage={this.props.createImage} restaurantId = {this.props.restaurant.id}/>;
+      return <UploadButton createImage={this.props.createImage} restaurantId = {this.props.restaurant.id || 0}/>;
     }
   }
 
