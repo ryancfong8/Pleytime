@@ -5,6 +5,7 @@ import RestaurantMap from './restaurant_map';
 class Restaurants extends React.Component {
   constructor (props){
     super(props);
+    window.scrollTo(0, 0);
 
     // this.state = {
     //   inputVal: ""

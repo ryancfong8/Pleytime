@@ -18,7 +18,7 @@ class Api::RestaurantsController < ApplicationController
   def index
     restaurants = bounds ? Restaurants.in_bounds(bounds) : Restaurant.all
     if params[:query]
-      restaurants = restaurants.where('name ILIKE ?', "%#{params[:query]}%")
+      restaurants = restaurants.where('name ILIKE ? OR description ILIKE ?', "%#{params[:query]}%", "%#{params[:query]}%")
     end
     @restaurants = restaurants
     render :index

@@ -20,6 +20,7 @@ class ReviewForm extends React.Component {
       errors: this.props.reviewErrors
     };
     this.rating = 0;
+    window.scrollTo(0, 0);
   }
 
   componentWillMount () {

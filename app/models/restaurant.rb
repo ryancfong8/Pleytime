@@ -5,13 +5,13 @@ class Restaurant < ApplicationRecord
 
   def averageRating
     reviews = self.reviews
-    total = 0
+    sum = 0
     reviews.each do |review|
-      total += review.rating
+      sum += review.rating
     end
 
     if self.reviews.length > 0
-      average = (total/self.reviews.length).ceil
+      (sum/self.reviews.length).ceil
     else
       0
     end

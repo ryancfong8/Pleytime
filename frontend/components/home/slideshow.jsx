@@ -39,7 +39,7 @@ class SlideShow extends React.Component {
             <img className="slide-image" src="http://res.cloudinary.com/ryancfong8/image/upload/v1490346694/brendas-003_e89sie.jpg"/>
           </div>
           <div className="slide-border">
-            <img className="slide-image" src="http://res.cloudinary.com/ryancfong8/image/upload/v1490346857/aina-1010595_vlyxpp.jpg"/>
+            <img className="slide-image" src="http://res.cloudinary.com/ryancfong8/image/upload/v1490379600/image_zlwclx.jpg"/>
           </div>
         </div>
     );

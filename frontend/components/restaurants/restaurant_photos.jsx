@@ -7,6 +7,7 @@ import PhotoIndexItem from '../photos/photo_index_item';
 class RestaurantPhotos extends React.Component {
   constructor (props) {
     super(props);
+    window.scrollTo(0, 0);
   }
 
   componentDidMount () {

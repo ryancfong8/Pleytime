@@ -13,6 +13,7 @@ class Restaurant extends React.Component {
 
     this.postImage = this.postImage.bind(this);
     this.state = this.props.currentUser;
+    window.scrollTo(0, 0);
     // this.state = { key: 1 };
   }
 
@@ -22,6 +23,7 @@ class Restaurant extends React.Component {
 
   componentDidMount(){
     this.props.fetchRestaurant(this.props.params.restaurantId);
+
   }
 
   // componentWillUpdate() {
@@ -83,7 +85,7 @@ class Restaurant extends React.Component {
 
   uploadButton () {
     if (this.props.currentUser) {
-      return <UploadButton createImage={this.props.createImage} restaurantId = {this.props.params.restaurantId}/>;
+      return <UploadButton createImage={this.props.createImage} restaurantId = {this.props.restaurant.id}/>;
     }
   }
 
@@ -125,7 +127,7 @@ class Restaurant extends React.Component {
               </div>
               <div className="r-imgs">
                 {this.props.restaurant.photos.slice(0, 3).map((photo) => (
-                  <PhotoIndexItem photo={photo} key={photo.id}/>
+                  <PhotoIndexItem photo={photo} key={photo.id + 'photo'}/>
                 ))}
               </div>
           </div>

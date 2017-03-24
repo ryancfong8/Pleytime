@@ -18,7 +18,110 @@ amy = User.create({username: 'Amy Y', password: "password"})
 alexis = User.create({username: 'Alexis P', password: "password"})
 stephanie = User.create({username: 'Stephanie L', password: "password"})
 
-restaurants = Restaurant.create([{
+restaurants = Restaurant.create([
+  {
+  name: "Dragon Beaux",
+  description: "A Chinese restaurant known for their dim sum and dumplings.",
+  address: "5700 Geary Blvd",
+  price:"$$",
+  lat:37.780500,
+  long:-122.480722,
+  city_params:"San Francisco, CA 94121",
+  phone:"(415) 333-8899",
+  mon:"11:00am - 2:30pm, 5:30pm - 10:00pm",
+  tue: "11:00am - 2:30pm, 5:30pm - 10:00pm",
+  wed:"11:00am - 2:30pm, 5:30pm - 10:00pm",
+  thur:"11:00am - 2:30pm, 5:30pm - 10:00pm",
+  fri:"11:00am - 2:30pm, 5:30pm - 10:00pm",
+  sat:"10:00am - 3:00pm, 5:30pm - 10:00pm",
+  sun:"11:00am - 2:30pm, 5:30pm - 10:00pm"
+  },
+  {
+    name: "Burma Superstar",
+    description: "Burmese Restaurant specializing in authentic Burmese dishes.",
+    address: "309 Clement St",
+    price: "$$",
+    lat: 37.78282831,
+    long: -122.462555,
+    city_params: "San Francisco, CA 94118",
+    phone: "(415) 387-2147",
+    mon: "11:30am - 3:00pm, 5:00pm - 9:30pm",
+    tue: "11:30am - 3:00pm, 5:00pm - 9:30pm",
+    wed: "11:30am - 3:00pm, 5:00pm - 9:30pm",
+    thur: "11:30am - 3:00pm, 5:00pm - 9:30pm",
+    fri: "11:30am - 3:00pm, 5:00pm - 10:00pm",
+    sat: "11:30am - 3:00pm, 5:00pm - 10:00pm",
+    sun: "11:30am - 3:00pm, 5:00pm - 9:30pm"
+    },
+  {
+  name: "Hog Island Oyster Co.",
+  description: "Seafood Bar and Grill with Happy Hour",
+  address: "1 Ferry Bldg",
+  price:"$$",
+  lat: 37.795570,
+  long: -122.393321,
+  city_params:"San Francisco, CA 94111",
+  phone:"(415) 391-7117",
+  mon:"11:00am - 9:00pm",
+  tue: "11:00am - 9:00pm",
+  wed:"11:00am - 9:00pm",
+  thur:"11:00am - 9:00pm",
+  fri:"11:00am - 9:00pm",
+  sat:"11:00am - 9:00pm",
+  sun:"11:00am - 9:00pm"
+  },
+  {
+  name: "Boba Guys",
+  description: "Boba Tea Cafe with unique flavors and toppings",
+  address: "429 Stockton St",
+  price:"$",
+  lat: 37.790003,
+  long:-122.407301,
+  city_params:"San Francisco, CA 94108",
+  phone:"Phone: None",
+  mon:"Closed",
+  tue: "8:00am - 9:00pm",
+  wed:"8:00am - 9:00pm",
+  thur:"8:00am - 9:00pm",
+  fri:"8:00am - 9:00pm",
+  sat:"8:00am - 9:00pm",
+  sun:"8:00am - 9:00pm"
+  },
+  {
+  name: "Sushirrito",
+  description: "A Japanese restaurant that specializes in making burritos out of sushi.",
+  address: "59 New Montgomery St",
+  price: "$$",
+  lat: 37.788139,
+  long: -122.401021,
+  city_params: "San Francisco, CA 94105",
+  phone:"(415) 495-7655",
+  mon: "11:00am - 4:00pm",
+  tue: "11:00am - 4:00pm",
+  wed:"11:00am - 4:00pm",
+  thur:"11:00am - 4:00pm",
+  fri:"11:00am - 4:00pm",
+  sat: "Closed",
+  sun: "Closed"
+  },
+  {
+  name: "Brenda’s French Soul Food",
+  description: "Breakfast and Brunch French Restaurant",
+  address: "652 Polk St",
+  price:"$$",
+  lat:37.782912,
+  long:-122.419015,
+  city_params:"San Francisco, CA 94102",
+  phone:"(415) 345-8100",
+  mon:"8:00am - 3:00pm",
+  tue: "8:00am - 3:00pm",
+  wed:"8:00am - 10:00pm",
+  thur:"8:00am - 10:00pm",
+  fri:"8:00am - 10:00pm",
+  sat:"8:00am - 10:00pm",
+  sun:"8:00am - 8:00pm"
+  },
+  {
   name: "Rooster & Rice",
   description: "Thai Restaurant specializing in Hainan-style chicken.",
   address: "303 2nd St",
@@ -34,23 +137,7 @@ restaurants = Restaurant.create([{
   fri: "11:00am - 3:00pm",
   sat: "Closed",
   sun: "Closed"
-},{
-  name: "Burma Superstar",
-  description: "Burmese Restaurant specializing in authentic Burmese dishes.",
-  address: "309 Clement St",
-  price: "$$",
-  lat: 37.78282831,
-  long: -122.462555,
-  city_params: "San Francisco, CA 94118",
-  phone: "(415) 387-2147",
-  mon: "11:30am - 3:00pm, 5:00pm - 9:30pm",
-  tue: "11:30am - 3:00pm, 5:00pm - 9:30pm",
-  wed: "11:30am - 3:00pm, 5:00pm - 9:30pm",
-  thur: "11:30am - 3:00pm, 5:00pm - 9:30pm",
-  fri: "11:30am - 3:00pm, 5:00pm - 10:00pm",
-  sat: "11:30am - 3:00pm, 5:00pm - 10:00pm",
-  sun: "11:30am - 3:00pm, 5:00pm - 9:30pm"
-  }, {
+}, {
     name: "San Tung",
     description: "Chinese Restaurant specializing in chinese-style fried chicken.",
     address: "1031 Irving St",
@@ -166,23 +253,6 @@ restaurants = Restaurant.create([{
       fri:"7:00am - 2:30pm",
       sat:"8:00am - 3:30pm",
       sun:"8:00am - 3:30pm"
-    },
-      {
-      name: "Sushirrito",
-      description: "A Japanese restaurant that specializes in making burritos out of sushi.",
-      address: "59 New Montgomery St",
-      price: "$$",
-      lat: 37.788139,
-      long: -122.401021,
-      city_params: "San Francisco, CA 94105",
-      phone:"(415) 495-7655",
-      mon: "11:00am - 4:00pm",
-      tue: "11:00am - 4:00pm",
-      wed:"11:00am - 4:00pm",
-      thur:"11:00am - 4:00pm",
-      fri:"11:00am - 4:00pm",
-      sat: "Closed",
-      sun: "Closed"
     },
       {
       name: "House of Prime Rib",
@@ -304,57 +374,6 @@ restaurants = Restaurant.create([{
     sun:"5:00pm - 11:30pm"
     },
     {
-    name: "Dragon Beaux",
-    description: "A Chinese restaurant known for their dim sum and famous item: Five Guys Xiao Long Bao. Each of the five dumplings comes in a different color and flavor.",
-    address: "5700 Geary Blvd",
-    price:"$$",
-    lat:37.780500,
-    long:-122.480722,
-    city_params:"San Francisco, CA 94121",
-    phone:"(415) 333-8899",
-    mon:"11:00am - 2:30pm, 5:30pm - 10:00pm",
-    tue: "11:00am - 2:30pm, 5:30pm - 10:00pm",
-    wed:"11:00am - 2:30pm, 5:30pm - 10:00pm",
-    thur:"11:00am - 2:30pm, 5:30pm - 10:00pm",
-    fri:"11:00am - 2:30pm, 5:30pm - 10:00pm",
-    sat:"10:00am - 3:00pm, 5:30pm - 10:00pm",
-    sun:"11:00am - 2:30pm, 5:30pm - 10:00pm"
-    },
-    {
-    name: "Hog Island Oyster Co.",
-    description: "Seafood Bar and Grill with Happy Hour",
-    address: "1 Ferry Bldg",
-    price:"$$",
-    lat: 37.795570,
-    long: -122.393321,
-    city_params:"San Francisco, CA 94111",
-    phone:"(415) 391-7117",
-    mon:"11:00am - 9:00pm",
-    tue: "11:00am - 9:00pm",
-    wed:"11:00am - 9:00pm",
-    thur:"11:00am - 9:00pm",
-    fri:"11:00am - 9:00pm",
-    sat:"11:00am - 9:00pm",
-    sun:"11:00am - 9:00pm"
-    },
-    {
-    name: "Boba Guys",
-    description: "Boba Tea Cafe with unique flavors and toppings",
-    address: "429 Stockton St",
-    price:"$",
-    lat: 37.790003,
-    long:-122.407301,
-    city_params:"San Francisco, CA 94108",
-    phone:"Phone: None",
-    mon:"Closed",
-    tue: "8:00am - 9:00pm",
-    wed:"8:00am - 9:00pm",
-    thur:"8:00am - 9:00pm",
-    fri:"8:00am - 9:00pm",
-    sat:"8:00am - 9:00pm",
-    sun:"8:00am - 9:00pm"
-    },
-    {
     name: "Bi-Rite Creamery",
     description: "Ice cream parlor",
     address: "3692 18th St",
@@ -387,23 +406,6 @@ restaurants = Restaurant.create([{
     fri:"5:00 pm - 10:00 pm",
     sat:"5:00 pm - 10:00 pm",
     sun:"11:30am - 2:30pm, 5:00 pm - 9:00 pm"
-    },
-    {
-    name: "Brenda’s French Soul Food",
-    description: "Breakfast and Brunch French Restaurant",
-    address: "652 Polk St",
-    price:"$$",
-    lat:37.782912,
-    long:-122.419015,
-    city_params:"San Francisco, CA 94102",
-    phone:"(415) 345-8100",
-    mon:"8:00am - 3:00pm",
-    tue: "8:00am - 3:00pm",
-    wed:"8:00am - 10:00pm",
-    thur:"8:00am - 10:00pm",
-    fri:"8:00am - 10:00pm",
-    sat:"8:00am - 10:00pm",
-    sun:"8:00am - 8:00pm"
     },
     {
     name: "The House",
@@ -527,165 +529,129 @@ restaurants = Restaurant.create([{
 
 
 photos = Photo.create([{
-  restaurant_id:1,
-  user_id:1,
-  url: "http://res.cloudinary.com/ryancfong8/image/upload/v1489774231/51129879_AUf41esvUqGNzyLvRSXnqdYJwnWFsEQW4Y23S7CbZRc_gkkth9.jpg"
-  }, {
-  restaurant_id:1,
-  user_id:1,
-  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489774265/180s_n4avoo.jpg"
-  }, {
-  restaurant_id:1,
+  restaurant_id:7,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489774860/1_xxngrh.jpg"
   }, {
-  restaurant_id:1,
+  restaurant_id:7,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489774885/348s_nfend1.jpg"
   }, {
   restaurant_id:2,
   user_id:1,
-  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489774953/burma_ewywvv.jpg"
+  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490379136/burma_superstar_tea_leaf_salad_anji_s_tvibjl.jpg"
   }, {
   restaurant_id:2,
   user_id:1,
-  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489775026/IMG_2007_c1hog1.jpg"
+  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490379199/JH48360-1024x681_y5oap4.jpg"
   }, {
   restaurant_id:2,
   user_id:1,
-  url:"https://res.cloudinary.com/ryancfong8/image/upload/t_media_lib_thumb/v1489775051/dsc02408_aw1d6h.jpg"
+  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490379263/8353599081_8a33da3e73_k_y0cxus.jpg"
   }, {
-  restaurant_id:2,
-  user_id:1,
-  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489775079/carousel-pic1_yq0vpy.jpg"
-  }, {
-  restaurant_id:3,
+  restaurant_id:8,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489775109/San-Tung-Dry-Fried-Chicken-Wings-1_s9hzws.jpg"
   }, {
-  restaurant_id:3,
+  restaurant_id:8,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489775133/348s_jckdvm.jpg"
   }, {
-  restaurant_id:3,
+  restaurant_id:8,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489775152/thumb_600_gxufgp.jpg"
   }, {
-  restaurant_id:3,
+  restaurant_id:8,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489775187/SanTung_Thumb.0_raqe88.webp"
   }, {
-  restaurant_id:4,
+  restaurant_id:9,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489775217/5990498_d3sjvw.jpg"
   }, {
-  restaurant_id:4,
+  restaurant_id:9,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489775233/image_mmmivv.jpg"
   }, {
-  restaurant_id:4,
+  restaurant_id:9,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489775267/5555295_icd0y1.png"
   }, {
-  restaurant_id:4,
+  restaurant_id:9,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489775289/5413462_zvoc7q.jpg"
   }, {
-  restaurant_id:5,
+  restaurant_id:10,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489775321/2000_gatzxt.jpg"
   }, {
-  restaurant_id:5,
+  restaurant_id:10,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489775338/hrd1-630x310_bx4duv.jpg"
   }, {
-  restaurant_id:5,
+  restaurant_id:10,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489775382/348s_b5qdov.jpg"
   }, {
-  restaurant_id:5,
+  restaurant_id:10,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489775403/food.hrdcoffee0907_xzyzu6.jpg"
   }, {
-  restaurant_id:6,
+  restaurant_id:11,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489977015/348s_q2gygr.jpg"
   }, {
-  restaurant_id: 7,
+  restaurant_id: 12,
   user_id:1,
   url: "http://res.cloudinary.com/ryancfong8/image/upload/v1489977219/stinking_nrzzak.jpg"
   }, {
-  restaurant_id: 8,
+  restaurant_id: 13,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489977311/348s_vmlzu4.jpg"
   }, {
-  restaurant_id: 9,
+  restaurant_id: 14,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489977370/IMG_0407.0_tbdov8.jpg"
-  }, {
-  restaurant_id: 10,
-  user_id:1,
-  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489977418/home_catering-481531e1a702912a078c352cea2daeca_megaub.jpg"
-  }, {
-  restaurant_id: 11,
+  },  {
+  restaurant_id: 15,
   user_id:1,
   url: "http://res.cloudinary.com/ryancfong8/image/upload/v1489977502/ls_dalkxe.jpg"
   }, {
-  restaurant_id: 12,
+  restaurant_id: 16,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1489977578/The-Halal-Guys-for-Caviar-SF_mr053q.jpg"
   }, {
-  restaurant_id:13,
+  restaurant_id:17,
   user_id:1,
   url: "http://res.cloudinary.com/ryancfong8/image/upload/v1489977629/Perilla-7_svb73f.jpg"
   }, {
-  restaurant_id:14,
+  restaurant_id:18,
   user_id:1,
   url: "http://res.cloudinary.com/ryancfong8/image/upload/v1489977697/348s_hn45jc.jpg"
   }, {
-  restaurant_id:15,
+  restaurant_id:19,
   user_id:1,
   url: "http://res.cloudinary.com/ryancfong8/image/upload/v1489977770/348s_wivygr.jpg"
   },
   {
-    restaurant_id:16,
+    restaurant_id:20,
     user_id:1,
     url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490345720/348s_tdqiqf.jpg"
   },
   {
-  restaurant_id:17,
+  restaurant_id:21,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346123/mensho-tokyo-sf06_xvmum1.jpg"
   },
   {
-  restaurant_id:18,
-  user_id:1,
-  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346244/Bauer0419_Dragon_0906_cnciwl.jpg"
-  },
-  {
-  restaurant_id:19,
-  user_id:1,
-  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346362/home11_hukpx9.jpg"
-  },
-  {
-  restaurant_id:20,
-  user_id:1,
-  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346414/Boba-Guys-Milk-Tea-and-Snack-Bar-in-San-Francisco-CA_nbad1f.jpg"
-  },
-  {
-  restaurant_id:21,
+  restaurant_id:22,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346465/4531db19397690437eeddf5dcb176cc2_knrzxv.jpg"
   },
   {
-  restaurant_id:22,
-  user_id:1,
-  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346592/crustaceans_banner1_bbsbui.jpg"
-  },
-  {
   restaurant_id:23,
   user_id:1,
-  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346694/brendas-003_e89sie.jpg"
+  url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490346592/crustaceans_banner1_bbsbui.jpg"
   },
   {
   restaurant_id:24,
@@ -721,26 +687,102 @@ photos = Photo.create([{
   restaurant_id:30,
   user_id:1,
   url:"http://res.cloudinary.com/ryancfong8/image/upload/v1490347282/lemonade_aruwy7.jpg"
-  }])
+  },
+  {
+  restaurant_id: 1,
+  user_id: 1,
+  url: "http://res.cloudinary.com/ryancfong8/image/upload/v1490378801/DragonBeaux-dibanh2_wbliae.jpg"
+  },
+  {
+  restaurant_id:1 ,
+  user_id: 1,
+  url: "http://res.cloudinary.com/ryancfong8/image/upload/v1490346244/Bauer0419_Dragon_0906_cnciwl.jpg"
+  },
+  {
+  restaurant_id:1,
+  user_id: 1,
+  url: "http://res.cloudinary.com/ryancfong8/image/upload/v1490378999/920x920_cexdto.jpg"
+  },
+  {
+  restaurant_id: 3,
+  user_id: 1,
+  url: "http://res.cloudinary.com/ryancfong8/image/upload/v1490346362/home11_hukpx9.jpg"
+  },
+  {
+  restaurant_id: 3,
+  user_id: 1,
+  url: "http://res.cloudinary.com/ryancfong8/image/upload/v1490379387/hogg-island_uw1w1s.jpg"
+  },
+  {
+  restaurant_id: 3,
+  user_id: 1,
+  url: "http://res.cloudinary.com/ryancfong8/image/upload/v1490379436/Shucking-Oysters.-Hog-Island-Oyster-Bar-San-Francisco.-Ed-Anderson-1000_qigw3o.jpg"
+  },
+  {
+  restaurant_id: 4,
+  user_id: 1,
+  url: "http://res.cloudinary.com/ryancfong8/image/upload/v1490379521/download.0.0_rx4yom.jpg"
+  },
+  {
+  restaurant_id: 4,
+  user_id: 1,
+  url: "http://res.cloudinary.com/ryancfong8/image/upload/v1490346414/Boba-Guys-Milk-Tea-and-Snack-Bar-in-San-Francisco-CA_nbad1f.jpg"
+  },
+  {
+  restaurant_id: 4,
+  user_id: 1,
+  url: "http://res.cloudinary.com/ryancfong8/image/upload/v1490379600/image_zlwclx.jpg"
+  },
+  {
+  restaurant_id: 5,
+  user_id: 1,
+  url: "http://res.cloudinary.com/ryancfong8/image/upload/v1489977418/home_catering-481531e1a702912a078c352cea2daeca_megaub.jpg"
+  },
+  {
+  restaurant_id: 5,
+  user_id: 1,
+  url: "http://res.cloudinary.com/ryancfong8/image/upload/v1490379768/WP_20150604_15_54_42_Pro-1_owwvwh.jpg"
+  },
+  {
+  restaurant_id: 5,
+  user_id: 1,
+  url: "http://res.cloudinary.com/ryancfong8/image/upload/v1490379883/10629459_862568957120235_8081312573875382472_o_lfacxy.jpg"
+  },
+  {
+  restaurant_id: 6,
+  user_id: 1,
+  url: "http://res.cloudinary.com/ryancfong8/image/upload/v1490346694/brendas-003_e89sie.jpg"
+  },
+  {
+  restaurant_id: 6,
+  user_id: 1,
+  url: "http://res.cloudinary.com/ryancfong8/image/upload/v1490380077/Brendas-Soul-Food-8_dav3nv.jpg"
+  },
+  {
+  restaurant_id: 6,
+  user_id: 1,
+  url: "http://res.cloudinary.com/ryancfong8/image/upload/v1490380168/1597_2_xubji9.jpg"
+  }
+  ])
 
   reviews = Review.create([{
     headline: "Rooster and Rice is Great!",
     body: "The chicken is very flavorful and the sauce is a must",
     rating: 5,
-    restaurant_id: 1,
+    restaurant_id: 7,
     user_id: 2
     }, {
     headline: "It was just ok",
     body: "The chicken is not anything special",
     rating: 3,
-    restaurant_id: 1,
+    restaurant_id: 7,
     user_id: 1
     },
     {
     headline: "Great tasting chicken!",
     body: "Chicken was great, but I wish there was more options",
     rating: 4,
-    restaurant_id: 1,
+    restaurant_id: 7,
     user_id: 3
     },
     {
@@ -753,35 +795,323 @@ photos = Photo.create([{
     headline: "Mhmmm Tasty!",
     body: "San Tung has the best chicken wings!",
     rating: 5,
-    restaurant_id: 3,
+    restaurant_id: 8,
     user_id:5
     },
     {
     headline: "Best Boba in California",
     body: "Tpumps has many options and you can choose up to 3 flavors to mix in your drink.  I would come on Tuesdays for the free upgrade to Pumpbo",
     rating: 5,
-    restaurant_id: 4,
+    restaurant_id: 9,
     user_id: 6
     },
     {
     headline: "Wait is Too Long",
     body: "We didn't want to wait so we left",
     rating: 1,
-    restaurant_id: 4,
+    restaurant_id: 9,
     user_id: 2
     },
     {
     headline: "HRD Rocks!",
     body: "Unique food flavor and combination!",
     rating: 5,
-    restaurant_id: 5,
+    restaurant_id: 10,
     user_id: 2
+    },
+    {
+    headline: "Dragon Beaux Has The Best Dim Sum",
+    body: "The dim sum is delicious and the dumplings are so cute! I would definitely come back here again.",
+    rating: 5,
+    restaurant_id: 1,
+    user_id: 8
+    },
+    {
+    headline: "The Food is Awesome!",
+    body: "Best Chinese Food in SF! The wait is long though.",
+    rating: 4,
+    restaurant_id:1,
+    user_id:3
+    },
+    {
+    headline: "Worth the Wait",
+    body: "The line gets pretty long but the food is absolutely worth it! I recommend getting here early during lunch and dinner.",
+    rating:5,
+    restaurant_id: 1,
+    user_id:7
+    },
+    {
+    headline: "The Food Took a Long Time to Come Out",
+    body: "The wait to get in was long, and the wait to get our food was longer, but the food wasn't bad.",
+    rating:3,
+    restaurant_id: 2,
+    user_id: 5
+    },
+    {
+    headline: "It was Ok",
+    body: "The food is definitely an acquired taste",
+    rating:3,
+    restaurant_id:2,
+    user_id:10
+    },
+    {
+    headline: "My Favorite Place!",
+    body: "Burma Superstar is fantastic! I always take my friends here whenever they visit!",
+    rating:5,
+    restaurant_id:2,
+    user_id:4
+    },
+    {
+    headline: "Delicious!",
+    body: "The seafood is great! We ordered dozens oysters during happy hour!",
+    rating: 5,
+    restaurant_id: 3,
+    user_id:6
+    },
+    {
+    headline: "Great Happy Hour Spot",
+    body: "Came here with coworkers after work and had a blast",
+    rating:5,
+    restaurant_id:3,
+    user_id:9
+    },
+    {
+    headline: "Service Wasn't Great",
+    body: "Did Not Enjoy this place too much. Loud and not very good service.",
+    rating:2,
+    restaurant_id:3,
+    user_id:10
+    },
+    {
+    headline: "Great Place for Dinner",
+    body: "Took my girlfriend out and we had a good time here. She got the pasta and I got the seafood platter. We enjoyed every bite!",
+    rating: 4,
+    restaurant_id: 3,
+    user_id:3
+    },
+    {
+    headline: "Best Place for Boba!",
+    body: "Boba Guys is Awesome! I love their boba!",
+    rating: 5,
+    restaurant_id:4,
+    user_id:4
+    },
+    {
+    headline: "The Wait Is Extremely Long",
+    body: "Be careful, the line can get over an hour long. Not worth it in my opinion.",
+    rating: 2,
+    restaurant_id: 4,
+    user_id:10
+    },
+    {
+    headline: "My Favorite Tea Place",
+    body: "Boba Guys knows how to make boba right. The tea is just the right amount and the boba is soft and sweet.",
+    rating:5,
+    restaurant_id:4,
+    user_id:7
+    },
+    {
+    headline: "Boba Guys is Worth the Wait",
+    body: "I waited 45minutes for my tea but it was so worth it!",
+    rating:4,
+    restaurant_id:4,
+    user_id:8
+    },
+    {
+    headline: "Sushirrito Is an Interesting Concept",
+    body: "Basically a giant sushi roll and you eat it like a burrito.",
+    rating:3,
+    restaurant_id:5,
+    user_id:5
+    },
+    {
+    headline: "What's the Big Deal?",
+    body: "Didn't think this place was anything special. Not real Japanese or Mexican food.",
+    rating:1,
+    restaurant_id:5,
+    user_id:10
+    },
+    {
+    headline: "This Place is Awesome!",
+    body: "Sushirrito is so unique! The fish tastes awesome and I never knew I could eat sushi like this!",
+    rating:5,
+    restaurant_id:5,
+    user_id:6
+    },
+    {
+    headline: "Believe the Hype!",
+    body: "One of my favorite places for lunch.  Line gets long around lunch but it is worth it!",
+    rating:5,
+    restaurant_id:5,
+    user_id:3
+    },
+    {
+    headline: "Brenda's is a Great Spot",
+    body: "Always come with my girls here for Sunday Brunch! The food is fantastic!",
+    rating: 5,
+    restaurant_id: 6,
+    user_id:9
+    },
+    {
+    headline: "The food was...interesting",
+    body: "Definitely did not recognize what I ordered.",
+    rating: 2,
+    restaurant_id:6,
+    user_id:10
+    },
+    {
+    headline: "Great Place!",
+    body: "Brenda's is a great place for the family.",
+    rating:4,
+    restaurant_id:6,
+    user_id:7
+    },
+    {
+    headline: "Food is Fantastic!",
+    body: "Tried this place for the first time and the food is awesome! I will be back!",
+    rating:5,
+    restaurant_id:6,
+    user_id:4
+    },
+    {
+    headline: "Tasty Pot Rocks",
+    body: "I love the individual hot pots!",
+    rating:5,
+    restaurant_id:11,
+    user_id:6
+    },
+    {
+    headline: "Garlic Overload",
+    body: "My girlfriend and I made a reservation here and we got seated in a private booth.  Every single thing we ordered was covered in garlic. The food was so good!",
+    rating:4,
+    restaurant_id:12,
+    user_id:1
+    },
+    {
+    headline: "Good Udon",
+    body: "The food is good, but not outstanding ",
+    rating:3,
+    restaurant_id:13,
+    user_id:6
+    },
+    {
+    headline: "Best Bakery",
+    body: "This bakery is a hotspot for good treats and great pictures!",
+    rating:5,
+    restaurant_id:14,
+    user_id:8
+    },
+    {
+    headline: "Great Dinner",
+    body: "We made a reservation months in advance. Steep prices, but you definitely get what you pay for.",
+    rating:4,
+    restaurant_id:15,
+    user_id:4
+    },
+    {
+    headline: "East Coast meets West Coast",
+    body: "The famous Halal Guys are finally in California! They taste just as good! ",
+    rating:4,
+    restaurant_id:16,
+    user_id:10
+    },
+    {
+    headline: "The Food was Just Ok",
+    body: "Pretty much tasted exactly as I expected to. Wasn't bad, but wasn't my favorite.",
+    rating:2,
+    restaurant_id:17,
+    user_id:4
+    },
+    {
+    headline: "Cute Crepe Designs!",
+    body: "The designs of the crepes are so cute! And they taste so good! Will definitely be back.",
+    rating:5,
+    restaurant_id:18,
+    user_id:8
+    },
+    {
+    headline: "Service was not Good",
+    body: "Had a terrible experience here. Food wasn't great, service was awful",
+    rating:1,
+    restaurant_id:19,
+    user_id:3
+    },
+    {
+    headline: "Nothing special",
+    body: "The pho was unique, but nothing special.",
+    rating:2,
+    restaurant_id:20,
+    user_id:10
+    },
+    {
+    headline: "Ok Food",
+    body: "The food was exactly what I expected, but it didn't impress me.  I guess I came in with too high expectations.",
+    rating:3,
+    restaurant_id:21,
+    user_id:5
+    },
+    {
+    headline: "The Ice Cream is the Best!",
+    body: "I always come here to reward myself after a long day!",
+    rating:5,
+    restaurant_id:22,
+    user_id:7
+    },
+    {
+    headline: "Too Expensive",
+    body: "Fancy restaurant, but not worth the price",
+    rating:2,
+    restaurant_id:23,
+    user_id:9
+    },
+    {
+    headline: "Cute little place",
+    body: "The place is small, but it has great food and a great atmosphere. Will be back!",
+    rating:4,
+    restaurant_id:24,
+    user_id:6
+    },
+    {
+    headline: "Great Food",
+    body: "Aina serves unique dishes that are beautifully prepared. Will be back!",
+    rating:4,
+    restaurant_id:25,
+    user_id:8
+    },
+    {
+    headline: "Long Wait, But A Unique Experience",
+    body: "I came here for lunch and line was really long. But it's not everday you get to eat Japanese Rice Balls.",
+    rating:3,
+    restaurant_id:26,
+    user_id:10
+    },
+    {
+    headline: "Great Tasting Baos",
+    body: "The baos are close the traditional baos and they taste great. Be on the lookout for their food truck!",
+    rating:4,
+    restaurant_id:27,
+    user_id:5
+    },
+    {
+    headline: "Good Time With Friends",
+    body: "Came here with some friends we all agreed that this place deserves another visit. Food is great!",
+    rating:4,
+    restaurant_id:28,
+    user_id:4
+    },
+    {
+    headline: "Great for the Fancy Date",
+    body: "It was definitely a special night at Alexander's! Great food and company! Can't get a better steak anywhere else.",
+    rating:5,
+    restaurant_id:29,
+    user_id:3
+    },
+    {
+    headline: "Drinks are Great, Food is Average",
+    body: "The wide variety of drinks are great, but the food was just ok.",
+    rating:3,
+    restaurant_id:30,
+    user_id:7
     }
-    # {
-    # headline: "",
-    # body: "",
-    # rating:,
-    # restaurant_id:,
-    # user_id:
-    # }
+
     ])
