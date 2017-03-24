@@ -1,3 +1,7 @@
+.everything {
+  margin-top: 15px;
+}
+
 .restaurant-page {
   background-color: #f5f5f5;
   height: 100%;
@@ -143,7 +147,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width:50%;
+  width:272px;;
   border: 1px solid #cccccc;
   border-radius: 5px;
   background-color: #ffffff;
@@ -163,31 +167,53 @@
 
 .Review-Button {
   border: 1px solid #000000;
-  width: 150px;
-  height: 35px;
+  width: 140px;
+  height: 25px;
   font-size:14px;
   background-color: #bd1f1f;
-  border-radius: 5px;
+  border-radius: 3px;
   color: #ffffff;
   font-weight: bold;
+  text-align: center;
 }
 
 .Review-Button:hover{
   background-color: #d32323;
 }
 
+.AllPhotos {
+  border: 1px solid #000000;
+  border-radius: 3px;
+  background-color: #fafafa;
+  width: 150px;
+  height: 25px;
+  font-size: 13px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #6b6b6b;
+  font-weight: bold;
+  text-align: center;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-between;
+}
+
+.AllPhotos:hover {
+  background-color: #ffffff;
+}
+
 .buttons {
   display: flex;
   flex-direction: row-reverse;
-  width: 40%;
+  width: 60%;
   align-items: center;
+  flex-wrap: wrap;
 
 }
 
 .r-name-buttons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin-bottom: 10px;
 }
 
@@ -233,21 +259,6 @@
   font-size: 18px;
 }
 
-.AllPhotos {
-  border: 1px solid #000000;
-  border-radius: 5px;
-  background-color: #fafafa;
-  width: 110px;
-  height: 35px;
-  font-size: 12px;
-  margin-left: 20px;
-  color: #6b6b6b;
-  font-weight: bold;
-}
-
-.AllPhotos:hover {
-  background-color: #ffffff;
-}
 
 .scroll-image {
   border-radius: 5px;
@@ -264,11 +275,44 @@
   border-radius: 5px;
   border: 1px solid #cccccc;
   margin-bottom: 5px;
+  box-sizing: border-box;
+  padding: 5px;
 }
 
 .r-des > h1 {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.camera-icon {
+  color: #000;
+  position: absolute;
+  margin-left: 2px;
+  margin-top: 5px;
+  width: 16px;
+  height: 10px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+}
+.camera-icon:before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 3px;
+  border: solid 1px currentColor;
+}
+.camera-icon:after {
+  content: '';
+  position: absolute;
+  right: 2px;
+  top: -2px;
+  width: 4px;
+  height: 1px;
+  border-radius: 1px 1px 0 0;
+  background-color: currentColor;
 }
 
 

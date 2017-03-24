@@ -9,7 +9,7 @@ class SingleRestaurantMap extends React.Component{
   componentDidMount() {
       const mapOptions = {
         center: { lat: this.props.restaurants[0].lat, lng: this.props.restaurants[0].long },
-        zoom: 10
+        zoom: 15
       };
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);

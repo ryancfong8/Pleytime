@@ -1,5 +1,5 @@
 import { RECEIVE_RESTAURANT, RECEIVE_PHOTO } from '../actions/restaurants_actions.js';
-import { RECEIVE_REVIEW, REMOVE_REVIEW } from '../actions/review_actions';
+import { RECEIVE_REVIEW, REMOVE_REVIEW, RECEIVE_REVIEW_ERRORS, REMOVE_REVIEW_ERRORS } from '../actions/review_actions';
 import { merge } from 'lodash';
 
 const nullRestaurant = {
@@ -12,7 +12,7 @@ const nullRestaurant = {
   lat: 37.773972,
   long: -122.431297,
   image_url: "",
-  photos: [],
+  photos: [{url: ""}],
   reviews: []
 };
 
@@ -35,6 +35,10 @@ const RestaurantReducer = (oldState = nullRestaurant, action) => {
       let index = newRestaurant.reviews.indexOf(action.review);
       newRestaurant.reviews.splice(index, 1);
       return newRestaurant;
+    // case RECEIVE_REVIEW_ERRORS:
+    //     return merge({}, oldState, {reviewErrors: action.reviewErrors});
+    // case REMOVE_REVIEW_ERRORS:
+    //     return merge({}, oldState.reviewErrors, {reviewErrors: []});
     default:
       return oldState;
   }

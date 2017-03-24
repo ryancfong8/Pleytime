@@ -147,3 +147,47 @@
 .Modal-Overlay {
   z-index:10;
 }
+
+.Search-Form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Search {
+  font-weight: bold;
+  font-size: 22px;
+  margin-right: 10px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Search-Input {
+  margin-left: 10px;
+  width: 350px;
+  height: 36px;
+  border-radius: 5px;
+  font-size: 20px;
+  box-sizing: border-box;
+  padding: 10px
+
+}
+
+.Search-Button {
+  background-color: #bd1f1f;
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.Search-Button:hover{
+  background-color: #990000;
+
+}

@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 4.7.0'
 gem 'annotate'
 gem 'cloudinary'
 gem 'figaro'

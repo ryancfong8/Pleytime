@@ -50,8 +50,20 @@ class Restaurant extends React.Component {
       let url = `restaurants/${this.props.params.restaurantId}/reviews/new`;
       return hashHistory.push(url);
     };
+
+    const editReview = (id) => (e) => {
+        e.preventDefault();
+        let url = `/restaurants/${this.props.params.restaurantId}/reviews/${id}/edit`;
+        return hashHistory.push(url);
+      };
     if (this.props.currentUser) {
-      return <button onClick={newReview(this.props.restaurant.id)} className="Review-Button">★ Write a Review</button>;
+      let reviewId = this.props.restaurant.reviews.find((review) => review.user_id === this.props.currentUser.id);
+      if (reviewId) {
+        return <button onClick={editReview(reviewId.id)} className="Review-Button">★ Edit a Review</button>;
+      }
+      else {
+        return <button onClick={newReview(this.props.restaurant.id)} className="Review-Button">★ Write a Review</button>;
+      }
     }
     else {
       return <text>Sign In to Write a Review!</text>;
@@ -64,12 +76,20 @@ class Restaurant extends React.Component {
       let url = `restaurants/${this.props.params.restaurantId}/photos`;
       return hashHistory.push(url);
     };
-    return <button className="AllPhotos" onClick={allPhotos()}>See All Photos</button>;
+    return <button className="AllPhotos" onClick={allPhotos()}>
+      ☕   See All Photos
+    </button>;
+  }
+
+  uploadButton () {
+    if (this.props.currentUser) {
+      return <UploadButton createImage={this.props.createImage} restaurantId = {this.props.params.restaurantId}/>;
+    }
   }
 
   render() {
     return (
-    <div>
+    <div className="everything">
       <div className = "first-half">
       <div className="restaurant-page">
           <div className="r-name-buttons">
@@ -87,16 +107,16 @@ class Restaurant extends React.Component {
               </div>
             </div>
             <div className="buttons">
-
+              {this.uploadButton()}
               {this.allPhotosButton()}
               {this.reviewButton()}
+
+
             </div>
           </div>
             <div className="r-map-pics">
               <div className="r-map-info">
-                  <div className="r-map">
                     <SingleRestaurantMap restaurants = {[this.props.restaurant]} />
-                  </div>
                   <text>{this.props.restaurant.address}</text>
                   <text>{this.props.restaurant.city_params}</text>
                   <text>{this.props.restaurant.phone}</text>

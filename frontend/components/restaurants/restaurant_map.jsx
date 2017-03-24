@@ -24,17 +24,6 @@ class RestaurantMap extends React.Component{
     });
   }
 
-  componentWillReceiveProps(newProps) {
-    let mapOptions = {
-      center: { lat: 37.76, lng: -122.5 },
-      zoom: 13
-    };
-
-    this.map = new google.maps.Map(this.mapNode, mapOptions);
-    this.MarkerManager = new MarkerManager(this.map);
-    this.MarkerManager.updateMarkers(newProps.restaurants);
-  }
-
   componentDidUpdate(){
     this.MarkerManager.updateMarkers(this.props.restaurants);
   }

@@ -194,7 +194,7 @@ DEPENDENCIES
   cloudinary
   coffee-rails (~> 4.2)
   figaro
-  font-awesome-sass
+  font-awesome-sass (~> 4.7.0)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

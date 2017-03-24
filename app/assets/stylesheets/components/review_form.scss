@@ -22,31 +22,36 @@
 
 .review-body-input {
   border: 1px solid #000000;
-  border-radius: 5px;
+  border-radius: 3px;
   height: 300px;
-  width: 400px;
+  width: 570px;
   box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
-  margin-left: 30px;
+  padding: 20px;
+  font-size: 14px;
 }
 
 .review-headline-input {
   border: 1px solid #000000;
-  border-radius: 5px;
-  margin-left: 8px;
+  border-radius: 3px;
   font-size: 16px;
   box-sizing: border-box;
-  padding: 10px;
-  margin-right: 50px;
+  padding: 20px;
   width: 570px;
+  height: 30px;
+}
+
+.review-headline-input:focus {
+  box-shadow: 2px 2px 5px #000000;
+}
+
+.review-body-input:focus {
+  box-shadow: 2px 2px 5px #000000;
 }
 
 .ReviewForm > input[type="submit"] {
   border: 1px solid #000000;
   border-radius: 5px;
-  margin-left: 30px;
-  margin-top: 20px;
+  margin-top: 10px;
   background-color: #d32323;
   color: #ffffff;
   font-weight: bold;
@@ -54,4 +59,50 @@
   padding: 5px;
   height: 30px;
   width: 105px;
+  text-align: center;
+  box-shadow: 1px 1px 2px #000000;
+}
+
+.ReviewForm > input[type="submit"]:hover {
+  background-color: #990000;
+}
+
+.restaurant-review-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.r-rev.des {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.rev-headline {
+  margin-top: 20px;
+}
+
+.title-properties-rev {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;;
+  margin-left: 10px;
+  margin-right: 20px;
+  width: 150px;
+}
+
+.title-properties-rev-text {
+  color: #666666;
+  font-size: 12px;
+}
+
+.rev-des {
+  margin-top: 5px;
+}
+.error-list{
+  margin-top: 10px;
+}
+.errors {
+  color: #d32323;
 }

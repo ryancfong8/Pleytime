@@ -1,0 +1,85 @@
+#slideshow {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+.slide-border {
+  position: absolute;
+}
+
+.slide-image{
+width: 100%;
+height: 600px;
+opacity: .9;
+}
+
+.Featured {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10%;
+}
+
+.featured-restaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin: 20px;
+  width: 300px;
+
+}
+
+.featured-pic {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.f-restaurant-index-name {
+  font-weight: bold;
+  font-family: 'Arial';
+  font-size: 16px;
+  color: #0033cc;
+  margin-top:10px;
+}
+
+.f-description {
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.f-title-properties {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.f-reviews {
+  color: #666666;
+  font-size: 13px;
+}
+
+.f-h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #d32323;
+}
+
+.Home-Search {
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 500px;
+  margin-top: 20%;
+  margin-left: 35%;
+}

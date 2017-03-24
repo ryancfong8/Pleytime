@@ -26,17 +26,26 @@ class SearchBar extends React.Component {
   handleSubmit (e) {
     e.preventDefault();
     this.props.fetchRestaurants(this.state.inputVal);
-    return hashHistory.push("/");
+    return hashHistory.push("/restaurants");
+  }
+
+  toggleClass () {
+    if (this.props.location === "/") {
+      return "Home-Search";
+    }
+    else {
+      return "Search-Form";
+    }
   }
 
   render () {
     return(
       <div>
-      <form onSubmit={this.handleSubmit}>
-        <label className="Search">Search:
-          <input className="Search-Results" type="text" onChange={this.update('inputVal')} />
+      <form className = {this.toggleClass()} onSubmit={this.handleSubmit}>
+        <label className="Search">
+          <input className="Search-Input" type="text" onChange={this.update('inputVal')} placeholder = "Find"/>
         </label>
-        <input type="submit" value="Go" />
+        <input className="Search-Button" type="image" alt="Submit" src="http://res.cloudinary.com/ryancfong8/image/upload/v1490308615/magnifying-glass-white_ymieca.png" />
       </form>
     </div>
   );
@@ -44,3 +53,4 @@ class SearchBar extends React.Component {
 }
 
 export default SearchBar;
+// 🔍

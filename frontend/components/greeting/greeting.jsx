@@ -24,11 +24,20 @@ class Greeting extends React.Component {
     );
   }
 
+  searchBar () {
+    if (this.props.location !== "/"){
+      return (
+        <SearchBar fetchRestaurants={this.props.fetchRestaurants}/>
+      );
+    }
+  }
+
   render() {
+
     return(
       <div className = "header">
         <Link className="logo" to="/">Pleytime</Link>
-        <SearchBar fetchRestaurants={this.props.fetchRestaurants}/>
+        {this.searchBar()}
         {this.props.currentUser ? this.personalGreeting(this.props.currentUser, this.props.logout) : this.sessionLinks()}
       </div>
     );

@@ -7,7 +7,7 @@ import RestaurantsContainer from './restaurants/restaurants_container';
 import RestaurantContainer from './restaurants/restaurant_container';
 import ReviewFormContainer from './reviews/review_form_container';
 import RestaurantPhotoContainer from './restaurants/restaurant_photo_container';
-import SearchResultsContainer from './search/search_results_container';
+import HomeContainer from './home/home_container';
 
 const Root = ({ store }) => {
   const _ensureLoggedIn = (nextState, replace) => {
@@ -27,8 +27,8 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory }>
         <Route path="/" component={ App } >
-          <IndexRoute component={ RestaurantsContainer } />
-          <Route path="search" component={SearchResultsContainer} />
+          <IndexRoute component={ HomeContainer } />
+          <Route path="restaurants" component={RestaurantsContainer} />
           <Route path="restaurants/:restaurantId" component={RestaurantContainer} />
           <Route path="restaurants/:restaurantId/photos" component={RestaurantPhotoContainer} />
 

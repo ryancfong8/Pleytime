@@ -41,11 +41,15 @@
 
 .Upload-Button {
   border: 1px solid #000000;
-  margin-top: 5px;
+  // margin-top: 5px;
   background-color: #d32323;
-  border-radius: 5px;
+  border-radius: 3px;
   font-weight: bold;
   color: #ffffff;
+  text-align: center;
+  width:100px;
+  height: 25px;
+  font-size: 13px;
 }
 
 .image-form-dropzone {
@@ -61,10 +65,10 @@
 .image-form-dropzone:hover {
   cursor: pointer;
 }
-
-input[type=submit]{
-  border: 1px solid #000000;
-}
+//
+// input[type=submit]{
+//   border: 1px solid #000000;
+// }
 
 .BigPic {
   width: 600px;

@@ -18,9 +18,9 @@ class Restaurants extends React.Component {
   //   this.props.fetchRestaurants(this.state.inputVal, this.props.bounds);
   // }
 
-  componentDidMount(){
-    this.props.fetchRestaurants();
-  }
+  // componentDidMount(){
+  //   this.props.fetchRestaurants();
+  // }
 
   handleInput (e) {
     this.setState({inputVal: e.currentTarget.value});

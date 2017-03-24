@@ -9,6 +9,10 @@
 ryan = User.create({username: 'Ryan', password: "password"})
 
 guestUser = User.create({username: 'Guest User', password: "password"})
+bob = User.create({username: 'Bob', password: "password"})
+jacob = User.create({username: 'Jacob', password: "password"})
+stevieD = User.create({username: 'Stevie D', password: "password"})
+john = User.create({username: 'John', password: "password"})
 
 restaurants = Restaurant.create([{
   name: "Rooster & Rice",
@@ -403,27 +407,27 @@ photos = Photo.create([{
     body: "Chicken was great, but I wish there was more options",
     rating: 4,
     restaurant_id: 1,
-    user_id: 2
+    user_id: 3
     },
     {
     headline: "Lives Up to the Hype",
     body: "Burma Superstar is awesome",
     rating: 5,
     restaurant_id: 2,
-    user_id: 2
+    user_id: 4
     }, {
     headline: "Mhmmm Tasty!",
     body: "San Tung has the best chicken wings!",
     rating: 5,
     restaurant_id: 3,
-    user_id:4
+    user_id:5
     },
     {
     headline: "Best Boba in California",
     body: "Tpumps has many options and you can choose up to 3 flavors to mix in your drink.  I would come on Tuesdays for the free upgrade to Pumpbo",
     rating: 5,
     restaurant_id: 4,
-    user_id: 1
+    user_id: 6
     },
     {
     headline: "Wait is Too Long",

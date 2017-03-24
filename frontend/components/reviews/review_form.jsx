@@ -1,7 +1,10 @@
 import React from 'react';
-import ReactStars from 'react-stars';
+import StarRating from 'react-star-rating';
 import { hashHistory } from 'react-router';
 import starRating from '../starRating';
+import ReactStars from 'react-stars';
+import StarRatingComponent from 'react-star-rating-component';
+import RestaurantReviewItem from '../restaurants/restaurant_review_item';
 
 class ReviewForm extends React.Component {
   constructor (props) {
@@ -11,11 +14,16 @@ class ReviewForm extends React.Component {
     this.state = this.props.review || {
       headline: "",
       body: "",
-      rating: "",
+      rating: 0,
       user_id: window.currentUser.id,
       restaurant_id: this.props.params.restaurantId,
+      errors: this.props.reviewErrors
     };
     this.rating = 0;
+  }
+
+  componentWillMount () {
+    this.props.fetchRestaurant(this.props.params.restaurantId);
   }
 
   componentDidMount () {
@@ -27,6 +35,9 @@ class ReviewForm extends React.Component {
   componentWillReceiveProps (newProps) {
     if (this.props.formType === "Update Review"){
       this.setState(newProps.review);
+    }
+    if (this.props.params.restaurantId !== newProps.params.restaurantId) {
+      this.props.fetchRestaurant(newProps.params.restaurantId);
     }
   }
 
@@ -61,8 +72,14 @@ class ReviewForm extends React.Component {
     if (this.props.review) {
       form.id = this.props.review.id;
     }
-    this.props.action(form);
-    return hashHistory.push(`restaurants/${this.props.params.restaurantId}`);
+    this.props.clearReviewErrors();
+    this.props.action(form).then(
+      () => {
+        if (this.props.reviewErrors.length === 0) {
+          return hashHistory.push(`restaurants/${this.props.params.restaurantId}`);
+        }
+      }
+    );
   }
 
   yourRating () {
@@ -71,25 +88,42 @@ class ReviewForm extends React.Component {
     }
   }
 
+  renderErrors() {
+    if (this.props.reviewErrors) {
+      return(
+        <ul>
+          {this.props.reviewErrors.map((error, i) => (
+            <li key={`error-${i}`} className= "error-list">
+              <text className="errors">Error: {error}</text>
+            </li>
+          ))}
+        </ul>
+      );
+    }
+  }
+
 
   render () {
     const updateRating = (newRating) => {
-      this.rating = newRating;
-      this.setState({rating: newRating});
-    };
+        this.rating = newRating;
+        this.setState({rating: newRating});
+      };
     const text = this.props.formType === 'New Review' ? "Create Review" : "Update Review";
     return (
         <form className="ReviewForm"onSubmit={this.handleSubmit}>
-          <h3>{text}</h3>
-          <br />
-          <label>Headline:
-            <input className="review-headline-input" type="text" value={this.state.headline} onChange={this.update('headline')} />
+          <h3 className="review-name">{text}</h3>
+          <RestaurantReviewItem restaurant = {this.props.restaurant}/>
+          {this.renderErrors()}
+          <label className = 'rev-headline'>
+            <input className="review-headline-input" type="text" value={this.state.headline} onChange={this.update('headline')} placeholder="Headline"/>
           </label>
           <br />
-            <textarea className="review-body-input" value={this.state.body} onChange={this.update('body')} />
+            <textarea className="review-body-input" value={this.state.body} onChange={this.update('body')}
+              placeholder="Your review helps others learn about great local businesses.
+              Please don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees."/>
             <div className='RF-rating'>
               <text>Rating:     </text>
-              <ReactStars count={5} onChange={updateRating} half={false}/>
+              <StarRatingComponent name="review-rating" value={this.state.rating} starCount={5} onStarClick={updateRating} />
             </div>
             {this.yourRating()}
           <input type="submit" value={text} />
@@ -99,3 +133,20 @@ class ReviewForm extends React.Component {
 }
 
 export default ReviewForm;
+
+// const updateRating = (newRating) => {
+//     this.rating = newRating;
+//     this.setState({rating: newRating});
+//   };
+
+// <ReactStars onChange={updateRating} count = {5} half={false} />
+
+// const updateRating = () => {
+//   return (e, {pos, newRating, caption, name}) => {
+//     e.preventDefault();
+//     this.rating = newRating;
+//     this.setState({rating: newRating});
+//   };
+// };
+
+// <StarRating name="review-rating" totalStars={5} ratingAmount = {this.state.rating} onRatingClick={updateRating} />
