@@ -1,6 +1,6 @@
 # Pleytime
 
-[Pleytime Live] [heroku]
+[Pleytime Live][heroku]
 
 [heroku]: https://pleytime.herokuapp.com/
 
@@ -15,19 +15,14 @@ Pleytime allows the user to access restaurant information as well as see other u
 
 * `Restaurants`: This is a index of all the restaurants returned by the search query.  Each restaurant's `name`, `rating`, `price`, `address`, and `description` are rendered along with their location on the map. The map is rendered using the Google Maps API, and is centered on San Francisco. The map is not re-rendered upon each search, instead markers are added and removed. Each restaurant's name is a link that will take user's to the respective restaurant's detailed view.
 
-<p align="center">
-  <img src="readMe_photos/index-page.png" alt="index-page">
-</p>
+![index page](readMe_photos/index-page.png)
 
 * `Restaurant`: This is a detailed view of a specific restaurant.  Each restaurant's information with all its reviews, business hours, and first three pictures are rendered onto this page.  Users have the ability to see all of the photos of the restaurant, as well as upload additional photos. Users also have the ability to write one review for each restaurant, and the review form is the third place the restaurant information is rendered. The review form only appears if the user is signed in. If the user has already written a review for the restaurant, the "Write a Review" button becomes an "Edit Review" button. Pictures of the website with and without a current user are shown below.
 
-<p align="center">
-  <img src="readMe_photos/detail-page.png" alt="restaurant-detail">
-</p>
+![detail page](readMe_photos/detail-page.png)
 
-<p align="center">
-  <img src="readMe_photos/detail-signedin-page.png" alt="restaurant-detail">
-</p>
+
+![detail signedin page](readMe_photos/detail-signedin-page.png)
 
 Each restaurant's rating is calculated by taking the average rating of the restaurant's reviews.  The calculation is defined by the restaurant model.
 
@@ -51,9 +46,7 @@ end
 
 The same form component is used when both creating and updating a review.  Reviews have a `headline` in addition to the `body`, in order to summarize the review. A formtype is passed to the review form component in order to determine if the form should create a review or update an existing review.  
 
-<p align="center">
-  <img src="readMe_photos/review-form-page.png" alt="review-form">
-</p>
+![review form page](readMe_photos/review-form-page.png)
 
 ### Search Bar
 
@@ -72,17 +65,13 @@ end
 
 If the user is on the home page, the search bar is rendered in the middle of the page instead of in the header.
 
-<p align="center">
-  <img src="readMe_photos/home-page.png" alt="review-form">
-</p>
+![home page](readMe_photos/home-page.png)
 
 ### Uploading Photos
 
 Users may upload photos to any restaurant once they are signed in.  A modal is used to handle the file submission, and Cloudinary is used to store all the photos on the website. Users have the ability to preview the photo they uploaded. Once users upload their photos, they will instantly see it appear on the restaurant's photos page.
 
-<p align="center">
-  <img src="readMe_photos/upload.png" alt="review-form">
-</p>
+![upload page](readMe_photos/upload.png)
 
 ## Future Directions for the Project
 
