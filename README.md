@@ -1,66 +1,36 @@
-# TO BE REPLACED WITH PRODUCTION README
-
 # Pleytime
 
-[Heroku link][heroku] **Note:** This should be a link to your production site
-
-[Trello link][trello]
+[Pleytime Live] [heroku]
 
 [heroku]: https://pleytime.herokuapp.com/
-[trello]: https://trello.com/b/vRwgZgzW/fullstackproject
 
-## Minimum Viable Product
-
-Pleytime is a web application inspired by Yelp built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with smooth, bug-free navigation, adequate seed data and sufficient CSS styling:
-
-* New account creation, login, and guest/demo login
-* A production README
-* Hosting on Heroku
-* Business Page
-* Search Bar
-* Reviews
-* Map
-
-## Design Docs
-
-* [View Wireframes][wireframes]
-* [React Components][components]
-* [API endpoints][api-endpoints]
-* [DB schema][schema]
-* [Sample State][sample-state]
-
-[wireframes]: docs/wireframes
-[components]: docs/component-hierarchy.md
-[sample-state]: docs/sample-state.md
-[api-endpoints]: docs/api-endpoints.md
-[schema]: docs/schema.md
+Pleytime is a full stack web application inspired by Yelp built using React with Redux architectural framework on the frontend, Ruby on Rails on the backend, and a PostgreSQL database. Pleytime aims to enhance the user's dining experience in San Francisco with the ability to read and create reviews for restaurants.
 
 
-## Implementation Timeline
+## Features & Implementation
 
-### Phase 1: Backend setup and Front End User Authentication (2 days)
+###Restaurants
 
-**Objective**: Functioning rails project with front-end Authentication
+Pleytime allows the user to access restaurant information as well as see other users' reviews.  Each restaurant's information is stored in one table in the database, with various columns such as `name`, `address`, `description`, `lat`, `long`, and other pieces of information.  The `lat` and `long` kept track of each restaurant's latitude and longitutde, respectively, in order to correctly place each restaurant's map marker. Each restaurant's information is rendered in 3 different places.  The first two are:
 
-### Phase 2: Restaurants Model, API, and components (2 days)
+* `Restaurants`: This is a index of all the restaurants returned by the search query.  Each restaurant's `name`, `rating`, `price`, `address`, and `description` are rendered along with their location on the map. Each restaurant's name is a link that will take user's to the respective restaurant's detailed view.
 
-**Objective:** Restaurants can be created, read, edited and destroyed through the API.
+* `Restaurant`: This is a detailed view of a specific restaurant.  Each restaurant's information with all its reviews, business hours, and first three pictures are rendered onto this page.  Users have the ability to see all of the photos of the restaurant, as well as upload additional photos. Users also have the ability to write one review for each restaurant, and the review form is the third place the restaurant information is rendered.
 
-### Phase 3: Reviews (2 days)
+###Creating and Updating a Review
 
-**Objective:** Reviews belong to Restaurants and can be created, read, edited and destroyed through the API.
+The same form component is used when both creating and updating a review.  Reviews have a `headline` in addition to the `body`, in order to summarize the review. A formtype is passed to the review form component in order to determine if the form should create a review or update an existing review.  
 
-### Phase 4: Home Page and Search Bar (2 days)
+###Search Bar
 
-**Objective:** Create a Home Page with a Search Bar.
+Users can search for restaurants by keyword.  Search results will return the restaurants whose name or description contain the keyword.  The search is handled on the backend, through the restaurants controller.
 
-### Phase 5: Map (1 day)
+## Future Directions for the Project
 
-**Objective:** Implement a map showing the restaurants that were returned by the search
+###User Profiles
 
-### Bonus Features
+Users will be able to view their personal profile, which will contain a profile picture, past reviews, and other information the user can share about themselves. To implement this, more columns on the users table will need to be included, and that information will be rendered on a user's page.
 
-* Search Filters
-* Have the ability to rate each dish of a restaurant
-* Discover section with scrolling pictures of food
-* User Profiles
+###Rate Dishes
+
+Instead of filtering through reviews to find out what to order, users will be able to rate and review each menu item of a restaurant. To implement this, a dishes table will need to be created, and the model will belong to a restaurant.  The dishes page will have very similar features to that of the restaurant page.
