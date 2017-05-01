@@ -15,7 +15,7 @@ class ReviewForm extends React.Component {
       headline: "",
       body: "",
       rating: 0,
-      user_id: window.currentUser.id,
+      user_id: this.props.currentUser.id,
       restaurant_id: this.props.params.restaurantId,
       errors: this.props.reviewErrors
     };

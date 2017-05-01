@@ -11,7 +11,8 @@ const mapStateToProps = (state, ownProps) => {
     review,
     formType,
     restaurant: state.restaurant,
-    reviewErrors: state.reviewErrors
+    reviewErrors: state.reviewErrors,
+    currentUser: state.session.currentUser
   };
 };
 
