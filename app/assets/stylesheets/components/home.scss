@@ -3,6 +3,7 @@
   width: 100%;
   height: 600px;
   object-fit: cover;
+  background: #000000;
 }
 
 .slide-border {
@@ -13,7 +14,7 @@
 width: 100%;
 height: 600px;
 object-fit: cover;
-opacity: .9;
+opacity: .6;
 }
 
 .Featured {
@@ -39,6 +40,7 @@ opacity: .9;
   width: 100%;
   height: 200px;
   border-radius: 5px;
+  object-fit: cover;
 }
 
 .f-restaurant-index-name {
@@ -75,6 +77,10 @@ opacity: .9;
   color: #d32323;
 }
 
+.slide-search {
+  position: relative;
+}
+
 .Home-Search {
   position: absolute;
   z-index: 9;
@@ -82,6 +88,12 @@ opacity: .9;
   flex-direction: row;
   align-items: center;
   width: 500px;
-  margin-top: 20%;
-  margin-left: 35%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }

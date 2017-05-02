@@ -43,7 +43,7 @@ class SearchBar extends React.Component {
       <div>
       <form className = {this.toggleClass()} onSubmit={this.handleSubmit}>
         <label className="Search">
-          <input className="Search-Input" type="text" onChange={this.update('inputVal')} placeholder = "Find"/>
+          <input className="Search-Input" type="text" onChange={this.update('inputVal')} placeholder = "Find restaurant, Japanese, $, etc."/>
         </label>
         <input className="Search-Button" type="image" alt="Submit" src="http://res.cloudinary.com/ryancfong8/image/upload/v1490308615/magnifying-glass-white_ymieca.png" />
       </form>

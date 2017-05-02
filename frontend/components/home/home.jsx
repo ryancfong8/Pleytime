@@ -17,14 +17,16 @@ class Home extends React.Component {
   render () {
     return(
       <div>
-        <SearchBar fetchRestaurants = {this.props.fetchRestaurants} location = {this.props.location.pathname} />
-        <SlideShow />
+        <div className = "slide-search">
+          <SearchBar fetchRestaurants = {this.props.fetchRestaurants} location = {this.props.location.pathname} />
+          <SlideShow />
+        </div>
 
         <h3 className="f-h1">Featured Restaurants</h3>
         <div className = "Featured">
-        {this.props.restaurants.slice(0,6).map((restaurant) => (
-          <FeaturedRestaurant key={restaurant.id} restaurant = {restaurant}/>
-        ))}
+          {this.props.restaurants.slice(0,6).map((restaurant) => (
+            <FeaturedRestaurant key={restaurant.id} restaurant = {restaurant}/>
+          ))}
         </div>
       </div>
     );

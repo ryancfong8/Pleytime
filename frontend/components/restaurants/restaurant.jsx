@@ -85,7 +85,7 @@ class Restaurant extends React.Component {
 
   uploadButton () {
     if (this.props.currentUser) {
-      return <UploadButton createImage={this.props.createImage} restaurantId = {this.props.restaurant.id || 0}/>;
+      return <UploadButton currentUser = {this.props.currentUser} createImage={this.props.createImage} restaurantId = {this.props.restaurant.id || 0}/>;
     }
   }
 
@@ -149,15 +149,6 @@ class Restaurant extends React.Component {
                 <text className="day">Friday: </text> <text>{this.props.restaurant.fri}</text>
                 <text className="day">Saturday: </text> <text>{this.props.restaurant.sat}</text>
                 <text className="day">Sunday: </text> <text>{this.props.restaurant.sun}</text>
-                </div>
-              <div className = "r-times">
-
-
-
-
-
-
-
               </div>
             </div>
         </div>

@@ -40,6 +40,9 @@ class ReviewForm extends React.Component {
     if (this.props.params.restaurantId !== newProps.params.restaurantId) {
       this.props.fetchRestaurant(newProps.params.restaurantId);
     }
+    if (!newProps.currentUser) {
+      return hashHistory.push(`/`);
+    }
   }
 
   update(property) {
@@ -66,7 +69,7 @@ class ReviewForm extends React.Component {
       headline: this.state.headline,
       body: this.state.body,
       rating: this.rating || this.state.rating,
-      user_id: window.currentUser.id,
+      user_id: this.props.currentUser.id,
       restaurant_id: this.props.params.restaurantId
     };
     e.preventDefault();
@@ -83,12 +86,6 @@ class ReviewForm extends React.Component {
     );
   }
 
-  yourRating () {
-    if (this.state.rating) {
-      return <text>Your Rating: {starRating(this.state.rating)}</text>;
-    }
-  }
-
   renderErrors() {
     if (this.props.reviewErrors) {
       return(
@@ -103,6 +100,23 @@ class ReviewForm extends React.Component {
     }
   }
 
+  yourRating () {
+    if (this.state.rating) {
+      // return <text>Your Rating: {starRating(this.state.rating)}</text>;
+      switch (this.state.rating){
+        case 5:
+          return <text>😁 This Place Is Awesome! I Will Definitely Come Back! 😁</text>;
+        case 4:
+          return <text>😃 This Place Exceeded My Expectations! 😃</text>;
+        case 3:
+          return <text>😐 This Place Met My Expectations. 😐</text>;
+        case 2:
+          return <text>😕 This Place Was Satisfactory, But It Could Do Better. 😕</text>;
+        case 1:
+          return <text>😞 I Would Not Recommend This Place. 😞</text>;
+      }
+    }
+  }
 
   render () {
     const updateRating = (newRating) => {
@@ -115,6 +129,11 @@ class ReviewForm extends React.Component {
           <h3 className="review-name">{text}</h3>
           <RestaurantReviewItem restaurant = {this.props.restaurant}/>
           {this.renderErrors()}
+          <div className='RF-rating'>
+            <text>Rating:     </text>
+            <StarRatingComponent name="review-rating" value={this.state.rating} starCount={5} onStarClick={updateRating} />
+          </div>
+          {this.yourRating()}
           <label className = 'rev-headline'>
             <input className="review-headline-input" type="text" value={this.state.headline} onChange={this.update('headline')} placeholder="Headline"/>
           </label>
@@ -122,11 +141,6 @@ class ReviewForm extends React.Component {
             <textarea className="review-body-input" value={this.state.body} onChange={this.update('body')}
               placeholder="Your review helps others learn about great local businesses.
               Please don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees."/>
-            <div className='RF-rating'>
-              <text>Rating:     </text>
-              <StarRatingComponent name="review-rating" value={this.state.rating} starCount={5} onStarClick={updateRating} />
-            </div>
-            {this.yourRating()}
           <input type="submit" value={text} />
         </form>
     );
