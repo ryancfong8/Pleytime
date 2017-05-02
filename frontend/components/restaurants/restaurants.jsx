@@ -33,16 +33,26 @@ class Restaurants extends React.Component {
     this.props.fetchRestaurants(this.state.inputVal, this.props.bounds);
   }
 
+  renderRestaurants () {
+    if (this.props.restaurants.length === 0) {
+      return(
+          <h2>No Results Found!</h2>
+      );
+      }
+    else {
+        return(<ul>
+          {this.props.restaurants.map((restaurant) => (
+            <RestaurantIndexItem key = {restaurant.id} restaurant = {restaurant}/>
+          ))}
+        </ul>);
+    }
+  }
   render () {
     return (
       <div>
         <div className='restaurants-items'>
           <h1>Restaurants</h1>
-          <ul>
-            {this.props.restaurants.map((restaurant) => (
-              <RestaurantIndexItem key = {restaurant.id} restaurant = {restaurant}/>
-            ))}
-          </ul>
+          {this.renderRestaurants()}
         </div>
         <div>
           <RestaurantMap restaurants = {this.props.restaurants} updateFilter = {this.props.updateFilter}/>
