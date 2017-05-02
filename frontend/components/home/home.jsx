@@ -18,7 +18,11 @@ class Home extends React.Component {
     return(
       <div>
         <div className = "slide-search">
-          <SearchBar fetchRestaurants = {this.props.fetchRestaurants} location = {this.props.location.pathname} />
+          <div className = "search-title">
+            <text className = "title1">Pleytime</text>
+            <SearchBar fetchRestaurants = {this.props.fetchRestaurants} location = {this.props.location.pathname} />
+            <text className = "slogan">Connect with local restaurants. Discover great "pleytes" in San Francisco.</text>
+          </div>
           <SlideShow />
         </div>
 

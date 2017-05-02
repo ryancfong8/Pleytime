@@ -12,9 +12,14 @@
   margin-left: 10px;
   color: #ffffff;
   font-weight: bold;
-  font-family: "Papyrus";
+  font-family: 'Pacifico', cursive;
   background-color: inherit;
   font-size: 32px;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 
