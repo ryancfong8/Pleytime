@@ -83,21 +83,42 @@
 
 .modal-title {
   font-weight: bold;
-  font-family: "Arial"
+  font-family: 'Pacifico', cursive;
+  font-size: 48px;
+  margin: 15px;
 }
 
 .modal-submit {
-  background-color: #ffffff;
-  font-family: "Arial";
   font-weight: bold;
+  background-color: #bd1f1f;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 .modal-submit:hover {
-  background-color: #f2f2f2;
+  background-color: #990000;
+}
+
+.directions {
+  margin: 10px;
+  font-size: 20px;
 }
 
 .login-input {
-  font-family: "Arial";
   margin-left: 5px;
+  font-size: 20px;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 400px;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
 .login {
@@ -113,13 +134,22 @@
   padding-bottom: 5px;
   border-radius: 5px;
   background-color: #ffffff;
-  font-family: "Arial";
   font-weight: bold;
+  background-color: #bd1f1f;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  width: 220px;
+  height: 35px;
+  text-align: center;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .label {
   font-family: "Arial";
-  background-color: #e60000;
 }
 
 .form {
@@ -130,11 +160,11 @@
 }
 
 .guestUser:hover {
-  background-color: #f2f2f2
+  background-color: #990000;
 }
 
 .or {
-  font-family: "Arial";
+
 }
 
 .guest {

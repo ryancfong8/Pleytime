@@ -116,20 +116,21 @@ class SessionForm extends React.Component {
 					style={ModalStyle}
 					overlayClassName="Modal-Overlay">
 					<form className="form">
-						<h3 className = "modal-title">Welcome to Pleytime!</h3>
+						<text className = "modal-title">Welcome to Pleytime!</text>
+						<text className="directions">Enter Your Username and Password</text>
 						{this.renderErrors()}
-						<label className="label"> Username:
+						<label className="label">
 							<input type="text"
 								value={this.state.username}
 								onChange={this.update("username")}
-								className="login-input" />
+								className="login-input" placeholder="Username"/>
 						</label>
 						<br/>
-						<label className="label"> Password:
+						<label className="label">
 							<input type="password"
 								value={this.state.password}
 								onChange={this.update("password")}
-								className="login-input" />
+								className="login-input" placeholder="Password"/>
 						</label>
 						<br/>
 						<button className="modal-submit" onClick={this.handleSubmit} >{this.state.modalType}</button>
