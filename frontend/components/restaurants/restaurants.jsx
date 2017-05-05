@@ -1,6 +1,7 @@
 import React from 'react';
 import RestaurantIndexItem from './restaurant_index_item';
 import RestaurantMap from './restaurant_map';
+import Draggable from 'react-draggable'; // The default
 
 class Restaurants extends React.Component {
   constructor (props){
@@ -50,10 +51,10 @@ class Restaurants extends React.Component {
   render () {
     return (
       <div>
-        <div className='restaurants-items'>
-          <h1>Restaurants</h1>
-          {this.renderRestaurants()}
-        </div>
+          <div className='restaurants-items'>
+            <h1 className='handle'>Restaurants</h1>
+            {this.renderRestaurants()}
+          </div>
         <div>
           <RestaurantMap restaurants = {this.props.restaurants} updateFilter = {this.props.updateFilter}/>
         </div>
@@ -63,6 +64,18 @@ class Restaurants extends React.Component {
 }
 
 export default Restaurants;
+
+// <Draggable
+//   defaultPosition={{x: 0, y: 0}}
+//   position={null}
+//   onStart={this.handleStart}
+//   onDrag={this.handleDrag}
+//   onStop={this.handleStop}>
+//   <div className='restaurants-items'>
+//     <h1 className='handle'>Restaurants</h1>
+//     {this.renderRestaurants()}
+//   </div>
+// </Draggable>
 
 
 //   matches() {

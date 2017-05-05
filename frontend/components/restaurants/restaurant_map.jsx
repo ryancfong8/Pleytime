@@ -8,7 +8,7 @@ class RestaurantMap extends React.Component{
 
   componentDidMount() {
     let mapOptions = {
-      center: { lat: 37.76, lng: -122.5 },
+      center: { lat: 37.78, lng: -122.385 },
       zoom: 13
     };
 

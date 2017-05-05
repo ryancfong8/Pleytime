@@ -3,7 +3,8 @@ import { Link } from 'react-router';
 import starRating from '../starRating';
 
 const RestaurantIndexItem = (props) => (
-  <li className="restaurant-list">
+
+  <div className="restaurant-list" id={`restaurant_index_item-${props.restaurant.id}`}>
     <div className="restaurant-index">
       <img className = "picture" src={props.restaurant.photos[0].url} />
       <div className="title-properties">
@@ -24,7 +25,7 @@ const RestaurantIndexItem = (props) => (
     <div className="r-description">
       <text>{props.restaurant.description}</text>
     </div>
-  </li>
+  </div>
 );
 
 export default RestaurantIndexItem;
