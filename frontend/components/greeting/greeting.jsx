@@ -8,7 +8,6 @@ class Greeting extends React.Component {
   constructor(props) {
     super(props);
   }
-
   sessionLinks() {
     return(
       <SessionFormContainer />
@@ -36,7 +35,15 @@ class Greeting extends React.Component {
 
     return(
       <div className = "header">
-        <Link className="logo" to="/">Pleytime</Link>
+        <div className="icons">
+          <Link className="logo" to="/">Pleytime</Link>
+            <a href="https://github.com/ryancfong8/Pleytime">
+              <img className="Github" src="http://res.cloudinary.com/ryancfong8/image/upload/v1494284221/GitHub-Mark-64px_k8oysy.png" alt="Github" />
+            </a>
+            <a href="https://www.linkedin.com/in/ryanfong8">
+              <img className="LinkedIn" src="http://res.cloudinary.com/ryancfong8/image/upload/v1494284174/In-Black-128px-TM_ybwajw.png" alt="LinkedIn" />
+          </a>
+        </div>
         {this.searchBar()}
         {this.props.currentUser ? this.personalGreeting(this.props.currentUser, this.props.logout) : this.sessionLinks()}
       </div>

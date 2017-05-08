@@ -3,8 +3,8 @@
   display: flex;
   justify-content: space-between;
   margin: auto;
-  align-items:center;
-  height: 75px;
+  align-items: center;
+  height: 70px;
   flex : 1 100%;
 }
 
@@ -228,4 +228,49 @@
 .Search-Button:hover{
   background-color: #990000;
 
+}
+
+.ErrorList {
+  background-color: #d32323;
+}
+
+.Footer {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #d32323;
+  position: absolute;
+  bottom: 0;
+
+}
+
+.Github {
+  width: 30px;
+  height: 30px;
+  background-color: inherit;
+  object-fit: cover;
+  margin-left: 20px;
+}
+
+.LinkedIn {
+  width: 30px;
+  height: 30px;
+  background-color: inherit;
+  margin-right: 20px;
+  margin-left: 10px;
+  object-fit: cover;
+}
+
+.icons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Error-List-Item {
+  color: #ffffff;
+  font-size: 24px;
 }

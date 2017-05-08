@@ -6,23 +6,21 @@
 
 Pleytime is a full stack web application inspired by Yelp built using React with Redux architectural framework on the frontend, Ruby on Rails on the backend, and a PostgreSQL database. Pleytime aims to enhance the user's dining experience in San Francisco with the ability to read and create reviews for restaurants.
 
+![home page](readME_photos/new_home_page.png)
 
 ## Features & Implementation
 
 ### Restaurants
 
-Pleytime allows the user to access restaurant information as well as see other users' reviews.  Each restaurant's information is stored in one table in the database, with various columns such as `name`, `address`, `description`, `lat`, `long`, and other pieces of information.  The `lat` and `long`  properties keep track of each restaurant's latitude and longitude, respectively, in order to correctly place each restaurant's map marker. Each restaurant's information is rendered in 3 different places.  The first two are:
+Pleytime allows the user to access restaurant information as well as see other users' reviews.  Each restaurant's information is stored in one table in the database, with various columns such as name, address, description.Each restaurant's information is rendered in 3 different places.  The first two are:
 
-* `Restaurants`: This is a index of all the restaurants returned by the search query.  Each restaurant's `name`, `rating`, `price`, `address`, and `description` are rendered along with their location on the map. The map is rendered using the Google Maps API, and is centered on San Francisco. The map is not re-rendered upon each search, instead markers are added and removed. Each restaurant's name is a link that will take user's to the respective restaurant's detailed view.
+* Restaurants Search Results: This is a index of all the restaurants returned by the search query.  Each restaurant's name, rating, price, address, and description are rendered along with their location on the map. The map is rendered using the Google Maps API, and is centered on San Francisco. The map is not re-rendered upon each search, instead markers are added and removed. Each restaurant's name is a link that will take user's to the respective restaurant's detailed view.
 
-![index page](readME_photos/index-page.png)
+![search results page](readME_photos/new_index_page.png)
 
-* `Restaurant`: This is a detailed view of a specific restaurant.  Each restaurant's information with all its reviews, business hours, and first three pictures are rendered onto this page.  Users have the ability to see all of the photos of the restaurant, as well as upload additional photos. Users also have the ability to write one review for each restaurant, and the review form is the third place the restaurant information is rendered. The review form only appears if the user is signed in. If the user has already written a review for the restaurant, the "Write a Review" button becomes an "Edit Review" button. Pictures of the website with and without a current user are shown below.
+* Restaurant Page: This is a detailed view of a specific restaurant.  Each restaurant's information with all its reviews, business hours, and first three pictures are rendered onto this page.  Users have the ability to see all of the photos of the restaurant, as well as upload additional photos. Users also have the ability to write one review for each restaurant, and the review form is the third place the restaurant information is rendered. The review form only appears if the user is signed in. If the user has already written a review for the restaurant, the "Write a Review" button becomes an "Edit Review" button. Pictures of the website with and without a current user are shown below.
 
-![detail page](readME_photos/detail-page.png)
-
-
-![detail signedin page](readME_photos/detail-signedin-page.png)
+![restaurant page](readME_photos/new_restaurant_page.png)
 
 Each restaurant's rating is calculated by taking the average rating of the restaurant's reviews.  The calculation is defined by the restaurant model.
 
@@ -44,9 +42,9 @@ end
 
 ### Creating and Updating a Review
 
-The same form component is used when both creating and updating a review.  Reviews have a `headline` in addition to the `body`, in order to summarize the review. A formtype is passed to the review form component in order to determine if the form should create a review or update an existing review.  
+The same form component is used when both creating and updating a review.  Reviews have a headline in addition to the body, in order to summarize the review. A form type is passed to the review form component in order to determine if the form should create a review or update an existing review.  
 
-![review form page](readME_photos/review-form-page.png)
+![review form page](readME_photos/new_review_page.png)
 
 ### Search Bar
 
@@ -65,13 +63,10 @@ end
 
 If the user is on the home page, the search bar is rendered in the middle of the page instead of in the header.
 
-![home page](readME_photos/home-page.png)
 
 ### Uploading Photos
 
 Users may upload photos to any restaurant once they are signed in.  A modal is used to handle the file submission, and Cloudinary is used to store all the photos on the website. Users have the ability to preview the photo they uploaded. Once users upload their photos, they will instantly see it appear on the restaurant's photos page.
-
-![upload page](readME_photos/upload.png)
 
 ## Future Directions for the Project
 

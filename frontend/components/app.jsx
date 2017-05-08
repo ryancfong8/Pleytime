@@ -9,6 +9,17 @@ const App = ({ children, location }) => (
 );
 
 export default App;
+// <div className = "Footer">
+//   <a href="https://github.com/ryancfong8/Pleytime">
+//     <img className="Github" src="http://res.cloudinary.com/ryancfong8/image/upload/v1494284221/GitHub-Mark-64px_k8oysy.png" alt="Github" />
+//   </a>
+//   <a href="https://www.linkedin.com/in/ryanfong8">
+//     <img className="LinkedIn" src="http://res.cloudinary.com/ryancfong8/image/upload/v1494284174/In-Black-128px-TM_ybwajw.png" alt="LinkedIn" />
+//   </a>
+// </div>
+
+// className="fa-github">
+// className="fa-linkedin">
 
 // const customStyles = {
 //   content : {

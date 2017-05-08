@@ -68,7 +68,7 @@ class Restaurant extends React.Component {
       }
     }
     else {
-      return <text>Sign In to Write a Review!</text>;
+      return <text className ="Message">★ Sign In to Write a Review!</text>;
     }
   }
 

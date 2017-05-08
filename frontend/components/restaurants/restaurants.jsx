@@ -41,7 +41,7 @@ class Restaurants extends React.Component {
       );
       }
     else {
-        return(<ul>
+        return(<ul className='restaurants-list'>
           {this.props.restaurants.map((restaurant) => (
             <RestaurantIndexItem key = {restaurant.id} restaurant = {restaurant}/>
           ))}
