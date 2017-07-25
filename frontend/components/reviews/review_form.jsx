@@ -21,8 +21,6 @@ class ReviewForm extends React.Component {
     };
     this.rating = 0;
     window.scrollTo(0, 0);
-
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentWillMount () {
