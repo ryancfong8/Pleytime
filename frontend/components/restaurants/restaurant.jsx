@@ -68,7 +68,14 @@ class Restaurant extends React.Component {
       }
     }
     else {
-      return <text className ="Message">★ Sign In to Write a Review!</text>;
+      return (
+              <div
+                  className="Review-Button disabled"
+                  title="Sign in to write a review"
+              >
+                Sign In To Review
+              </div>
+      );
     }
   }
 
@@ -78,9 +85,11 @@ class Restaurant extends React.Component {
       let url = `restaurants/${this.props.params.restaurantId}/photos`;
       return hashHistory.push(url);
     };
-    return <button className="AllPhotos" onClick={allPhotos()}>
-      ☕   See All Photos
-    </button>;
+    return (
+        <button className="AllPhotos" onClick={allPhotos()}>
+            <i className="fas fa-camera"></i> See All Photos
+        </button>
+    );
   }
 
   uploadButton () {
