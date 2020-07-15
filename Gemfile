@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'newrelic_rpm'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'annotate'
 gem 'cloudinary'
